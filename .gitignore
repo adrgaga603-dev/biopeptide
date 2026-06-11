@@ -1,0 +1,14 @@
+# Claude Code internals
+.claude/
+
+# Unrelated projects in this workspace
+superpowers-main/
+claudeweb.md
+
+# Catalog PDF (not for public repo)
+*.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

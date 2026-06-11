@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adrgaga603-dev.github.io/biopeptide/sitemap.xml
