@@ -927,6 +927,83 @@
         }
 
         /* ─── RESPONSIVE ──────────────────────────────── */
+        /* ─── VIEWS ──────────────────────────────────── */
+        .view { display: none; }
+        .view.active { display: block; }
+
+        /* ─── ARTICLE VIEW ────────────────────────────── */
+        .article-wrap { max-width: 780px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+        .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.7rem; font-weight: 600; color: var(--text-muted); margin-bottom: 2rem; }
+        .breadcrumb a { color: var(--teal); text-decoration: none; }
+        .breadcrumb span { opacity: 0.4; }
+        .article-meta { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; }
+        .article-read-time { font-size: 0.7rem; font-weight: 500; color: var(--text-muted); }
+        .article-h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 400; line-height: 1.12; color: var(--text); margin-bottom: 1.5rem; }
+        .article-lead { font-size: 1rem; line-height: 1.75; color: var(--text-soft); border-left: 3px solid var(--teal); padding-left: 1.25rem; margin-bottom: 3rem; }
+        .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 400; color: var(--text); margin: 2.5rem 0 1rem; }
+        .article-body h3 { font-size: 0.9rem; font-weight: 700; text-transform: uppercase; color: var(--teal); margin: 1.75rem 0 0.75rem; }
+        .article-body p { font-size: 0.9rem; line-height: 1.85; color: var(--text-soft); margin-bottom: 1.1rem; }
+        .article-body strong { color: var(--text); font-weight: 700; }
+        .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.1rem; }
+        .article-body li { font-size: 0.88rem; line-height: 1.75; color: var(--text-soft); margin-bottom: 0.5rem; }
+        .article-body em { font-style: italic; }
+        .info-box { background: white; border: 1px solid var(--sand); border-left: 3px solid var(--teal); border-radius: 6px; padding: 1.25rem 1.5rem; margin: 1.75rem 0; }
+        .info-box-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.6rem; }
+        .info-box p { font-size: 0.84rem; line-height: 1.7; color: var(--text-soft); margin-bottom: 0; }
+        .article-divider { height: 1px; background: var(--sand); margin: 3rem 0; }
+        .compare-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; border-radius: 6px; overflow: hidden; }
+        .compare-table thead tr { background: var(--forest); }
+        .compare-table thead th { padding: 0.8rem 1rem; text-align: left; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(251,251,239,0.7); }
+        .compare-table tbody tr:nth-child(even) { background: rgba(229,226,217,0.3); }
+        .compare-table tbody tr:nth-child(odd) { background: white; }
+        .compare-table td { padding: 0.75rem 1rem; font-size: 0.83rem; line-height: 1.55; color: var(--text-soft); border-bottom: 1px solid var(--sand); }
+        .compare-table td:first-child { font-weight: 600; color: var(--text); }
+        .faq-item { border: 1px solid var(--sand); border-radius: 6px; overflow: hidden; margin-bottom: 0.6rem; }
+        .faq-question { width: 100%; background: white; border: none; padding: 1rem 1.25rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; cursor: pointer; text-align: left; font-family: 'Quicksand', sans-serif; font-size: 0.88rem; font-weight: 600; color: var(--text); transition: background 0.2s; }
+        .faq-question:hover { background: rgba(13,138,110,0.03); }
+        .faq-icon { font-size: 1.2rem; color: var(--teal); flex-shrink: 0; transition: transform 0.2s; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+        .faq-answer { display: none; padding: 0 1.25rem 1rem; background: white; font-size: 0.86rem; line-height: 1.75; color: var(--text-soft); }
+        .faq-item.open .faq-answer { display: block; }
+        .research-cta { background: var(--forest); border-radius: 8px; padding: 2rem 2.25rem; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; margin-top: 3rem; flex-wrap: wrap; }
+        .research-cta-text h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 400; color: var(--cream); margin-bottom: 0.4rem; }
+        .research-cta-text p { font-size: 0.78rem; color: rgba(251,251,239,0.45); line-height: 1.5; margin-bottom: 0; }
+        .related { margin-top: 4rem; }
+        .related h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 300; color: var(--text); margin-bottom: 1.25rem; }
+        .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .related-card { background: white; border: 1px solid var(--sand); border-radius: 6px; padding: 1.25rem; text-decoration: none; transition: transform 0.2s; cursor: pointer; }
+        .related-card:hover { transform: translateY(-2px); }
+        .related-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 400; color: var(--text); line-height: 1.25; margin-top: 0.5rem; }
+        /* ─── DISCLAIMER ──────────────────────────────── */
+        .disclaimer-hero { background: var(--forest); padding: 4rem 2rem 3.5rem; text-align: center; }
+        .disclaimer-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 4vw, 2.75rem); font-weight: 300; color: var(--cream); margin-bottom: 0.75rem; line-height: 1.2; }
+        .disclaimer-hero p { font-size: 0.85rem; color: rgba(251,251,239,0.55); max-width: 520px; margin: 0 auto; line-height: 1.75; }
+        .disclaimer-wrap { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 6rem; }
+        .toc { background: white; border: 1px solid var(--sand); border-radius: 6px; padding: 1.5rem; margin-bottom: 3rem; }
+        .toc h3 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 1rem; }
+        .toc ol { padding-left: 1.25rem; }
+        .toc li { font-size: 0.83rem; line-height: 1.75; }
+        .toc a { color: var(--teal); text-decoration: none; font-weight: 600; }
+        .dsection { margin-bottom: 3.5rem; }
+        .dsection-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.75rem; }
+        .dsection h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 400; color: var(--text); margin-bottom: 1rem; line-height: 1.2; }
+        .dsection p { font-size: 0.9rem; line-height: 1.85; color: var(--text-soft); margin-bottom: 1rem; }
+        .dsection strong { color: var(--text); font-weight: 700; }
+        .dsection ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+        .dsection li { font-size: 0.88rem; line-height: 1.8; color: var(--text-soft); margin-bottom: 0.4rem; }
+        .no-box { background: rgba(180,30,30,0.06); border: 1px solid rgba(180,30,30,0.15); border-left: 3px solid #B41E1E; border-radius: 6px; padding: 1.5rem; margin: 1.5rem 0; }
+        .no-box h3 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #B41E1E; margin-bottom: 1rem; }
+        .no-box ul { padding-left: 1.25rem; }
+        .no-box li { font-size: 0.86rem; line-height: 1.75; color: #7A2020; margin-bottom: 0.4rem; }
+        .highlight-box { background: rgba(13,138,110,0.06); border: 1px solid rgba(13,138,110,0.2); border-radius: 6px; padding: 1.5rem; margin: 1.5rem 0; }
+        .highlight-box p { font-size: 0.86rem; color: var(--text-soft); margin-bottom: 0; }
+        .section-divider { height: 1px; background: var(--sand); margin: 2.5rem 0; }
+        .contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; }
+        .contact-card { background: white; border: 1px solid var(--sand); border-radius: 6px; padding: 1.25rem 1.5rem; }
+        .contact-card h4 { font-size: 0.78rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+        .contact-card p { font-size: 0.82rem; color: var(--text-soft); line-height: 1.6; margin-bottom: 0; }
+        .contact-card a { color: var(--teal); text-decoration: none; font-weight: 600; }
+
         @media (max-width: 1024px) {
             .article-grid { grid-template-columns: repeat(2, 1fr); }
         }
@@ -970,7 +1047,7 @@
 
     <!-- COMPLIANCE STRIP -->
     <div class="compliance-strip">
-        <p><strong>Solo para fines de investigación científica.</strong> No apto para consumo humano ni veterinario. — <a href="disclaimer.html">Aviso legal completo</a></p>
+        <p><strong>Solo para fines de investigación científica.</strong> No apto para consumo humano ni veterinario. — <a href="#disclaimer">Aviso legal completo</a></p>
     </div>
 
     <!-- NAV -->
@@ -991,6 +1068,9 @@
             <span class="nav-badge">Solo Investigación</span>
         </div>
     </nav>
+
+    <!-- HOME VIEW -->
+    <div id="view-home" class="view active">
 
     <!-- HERO -->
     <section class="hero">
@@ -1044,7 +1124,7 @@
         </div>
 
         <!-- Featured Card: Tirzepatida -->
-        <a href="tirzepatida.html" class="featured-card">
+        <a href="#tirzepatida" class="featured-card">
             <div class="featured-card-visual">
                 <div class="featured-card-visual-grid"></div>
                 <span class="featured-card-visual-icon">Tz</span>
@@ -1068,7 +1148,7 @@
         <!-- Article Grid -->
         <div class="article-grid">
 
-            <a href="articulo-semaglutide-vs-tirzepatida.html" class="article-card">
+            <a href="#semaglutide-vs-tirzepatida" class="article-card">
                 <div class="article-card-meta">
                     <span class="article-tag tag-metabolico">Metabólico</span>
                     <span class="article-card-read-time">5 min</span>
@@ -1083,7 +1163,7 @@
                 </span>
             </a>
 
-            <a href="articulo-retatrutide.html" class="article-card">
+            <a href="#retatrutide" class="article-card">
                 <div class="article-card-meta">
                     <span class="article-tag tag-metabolico">Metabólico</span>
                     <span class="article-card-read-time">6 min</span>
@@ -1098,7 +1178,7 @@
                 </span>
             </a>
 
-            <a href="articulo-bpc157.html" class="article-card">
+            <a href="#bpc157" class="article-card">
                 <div class="article-card-meta">
                     <span class="article-tag tag-regeneracion">Regeneración</span>
                     <span class="article-card-read-time">5 min</span>
@@ -1113,7 +1193,7 @@
                 </span>
             </a>
 
-            <a href="articulo-nad.html" class="article-card">
+            <a href="#nad" class="article-card">
                 <div class="article-card-meta">
                     <span class="article-tag tag-longevidad">Longevidad</span>
                     <span class="article-card-read-time">6 min</span>
@@ -1128,7 +1208,7 @@
                 </span>
             </a>
 
-            <a href="articulo-peptidos-nootropicos.html" class="article-card">
+            <a href="#nootropicos" class="article-card">
                 <div class="article-card-meta">
                     <span class="article-tag tag-cognitivo">Cognitivo</span>
                     <span class="article-card-read-time">5 min</span>
@@ -1512,7 +1592,7 @@
                 <span class="footer-brand-text">BIOFILLERS</span>
             </a>
             <div class="footer-links">
-                <a class="footer-link" href="disclaimer.html">Aviso Legal</a>
+                <a class="footer-link" href="#disclaimer">Aviso Legal</a>
                 <a class="footer-link" href="#tendencias">Artículos</a>
                 <a class="footer-link" href="#compuestos">Compuestos</a>
             </div>
@@ -1522,21 +1602,257 @@
         </p>
     </footer>
 
+    </div><!-- /view-home -->
+
+    <!-- ═══ ARTICLE VIEWS ═══════════════════════════════════════════ -->
+
+    <!-- SHARED ARTICLE FOOTER TEMPLATE (used inline in each view) -->
+
+    <!-- VIEW: TIRZEPATIDA -->
+    <div id="view-tirzepatida" class="view">
+      <main class="article-wrap">
+        <nav class="breadcrumb"><a href="#">Inicio</a><span>›</span><a href="#tendencias">Tendencias</a><span>›</span><span style="color:var(--text-soft)">Tirzepatida</span></nav>
+        <div class="article-meta"><span class="article-tag tag-metabolico">Control de Peso</span><span class="article-read-time">8 min lectura · Investigación 2026</span></div>
+        <h1 class="article-h1">¿Qué es la Tirzepatida y cómo funciona? Guía de investigación 2026</h1>
+        <p class="article-lead">La tirzepatida es un péptido sintético de doble agonismo incretínico que activa simultáneamente los receptores GLP-1 y GIP. Desarrollado originalmente por Eli Lilly, se ha convertido en uno de los compuestos metabólicos más investigados de la última década por su perfil de acción sobre el metabolismo glucídico y lipídico.</p>
+        <div class="article-body">
+          <h2>¿Qué es la tirzepatida?</h2>
+          <p>La tirzepatida es un péptido de 39 aminoácidos basado estructuralmente en el GIP endógeno, con modificaciones que le permiten activar también el receptor GLP-1R. Esta arquitectura molecular de doble agonismo la distingue de los agonistas GLP-1 clásicos como semaglutida o liraglutida, que actúan exclusivamente sobre el receptor GLP-1.</p>
+          <p>El compuesto cuenta con una cadena de ácido graso C20 unida mediante un espaciador de aminoácidos que facilita la unión reversible a la albúmina sérica, extendiendo su vida media a aproximadamente 5 días en modelos humanos.</p>
+          <div class="info-box"><p class="info-box-label">Dato estructural</p><p>La tirzepatida está basada en la secuencia del GIP humano, no del GLP-1. Las modificaciones en posiciones clave le otorgan la capacidad de unirse al GLP-1R con afinidad comparable al GLP-1 nativo. Este enfoque es diferente al de semaglutida, que parte de la secuencia del GLP-1.</p></div>
+          <h2>Mecanismo de acción: doble agonista GLP-1 / GIP</h2>
+          <p><strong>Receptor GLP-1 (GLP-1R):</strong> La activación de GLP-1R en células β pancreáticas estimula la secreción de insulina de manera dependiente de glucosa. En el hipotálamo, la señalización GLP-1R modula la saciedad a través del núcleo arcuato y el área postrema. También ralentiza el vaciamiento gástrico, reduciendo la velocidad de absorción de nutrientes.</p>
+          <p><strong>Receptor GIP (GIPR):</strong> El GIP actúa sobre células β y α pancreáticas, tejido adiposo y sistema nervioso central. En adipocitos, el GIPR modula la captación de ácidos grasos y la lipólisis. Los estudios preclínicos sugieren que la activación de GIPR en el SNC puede contribuir a la regulación del balance energético de forma independiente al GLP-1R.</p>
+          <h2>Diferencias clave con semaglutide</h2>
+          <table class="compare-table"><thead><tr><th>Característica</th><th>Semaglutida</th><th>Tirzepatida</th></tr></thead><tbody><tr><td>Base estructural</td><td>GLP-1 humano (94% homología)</td><td>GIP humano modificado</td></tr><tr><td>Receptores activos</td><td>GLP-1R</td><td>GLP-1R + GIPR</td></tr><tr><td>Cadena lipídica</td><td>C18 (ácido esteárico)</td><td>C20 (ácido eicosadioico)</td></tr><tr><td>Vida media aprox.</td><td>~7 días</td><td>~5 días</td></tr><tr><td>Reducción HbA1c (SURPASS-2)</td><td>1.86%</td><td>2.01–2.30%</td></tr><tr><td>Reducción de peso (SURMOUNT-1)</td><td>—</td><td>Hasta ~22.5% a 72 semanas</td></tr></tbody></table>
+          <h2>¿Para qué se investiga?</h2>
+          <p>Los ensayos clínicos principales (SURPASS 1–5, SURMOUNT 1–4) exploran la tirzepatida en los siguientes contextos: regulación glucémica en resistencia a la insulina, composición corporal y adiposidad, dislipidemia aterogénica, esteatosis hepática no alcohólica (EHNA/MASH) y apnea obstructiva del sueño.</p>
+          <h2>Preguntas frecuentes de investigación</h2>
+          <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">¿A qué dosis se usa tirzepatida en estudios clínicos?<span class="faq-icon">+</span></button><div class="faq-answer">Los ensayos SURPASS utilizaron dosis de 5, 10 y 15 mg administradas semanalmente por vía subcutánea, con titulación escalonada desde 2.5 mg cada 4 semanas para evaluar tolerabilidad.</div></div>
+          <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">¿Con qué frecuencia se administra en estudios?<span class="faq-icon">+</span></button><div class="faq-answer">La administración en los ensayos clínicos es una vez por semana (QW), aprovechando la vida media extendida por la unión a albúmina. Esto contrasta con péptidos de vida media corta que requieren administración diaria o más frecuente.</div></div>
+          <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">¿Qué diferencia al doble agonismo del agonismo simple?<span class="faq-icon">+</span></button><div class="faq-answer">La adición del agonismo GIPR potencialmente mejora la secreción de insulina postprandial y modula vías de señalización en adipocitos que el GLP-1R no alcanza directamente. Los investigadores estudian si esta suma de efectos explica el perfil observado en los ensayos clínicos.</div></div>
+          <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">¿Se puede combinar con otros péptidos en investigación?<span class="faq-icon">+</span></button><div class="faq-answer">En contextos de investigación se exploran combinaciones con péptidos de otras vías (amilina, FGF21). La co-administración con otros agonistas del mismo receptor no está documentada como práctica en estudios clínicos actuales.</div></div>
+          <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">¿Cuál es el estado regulatorio actual?<span class="faq-icon">+</span></button><div class="faq-answer">Tirzepatida (Mounjaro®/Zepbound®) cuenta con aprobación de la FDA para indicaciones específicas. Los compuestos de grado investigación disponibles no están aprobados para uso terapéutico y son estrictamente para investigación científica controlada.</div></div>
+          <div class="article-divider"></div>
+          <h2>Recursos y literatura científica</h2>
+          <p>Frías JP et al. (2021). Tirzepatide versus Semaglutide Once Weekly in Patients with Type 2 Diabetes. <em>NEJM</em>. DOI: 10.1056/NEJMoa2107519</p>
+          <p>Jastreboff AM et al. (2022). Tirzepatide Once Weekly for the Treatment of Obesity. <em>NEJM</em>. DOI: 10.1056/NEJMoa2206038</p>
+          <p>Coskun T et al. (2022). Tirzepatide is an imbalanced and biased dual GIP and GLP-1 receptor agonist. <em>JCI</em>. DOI: 10.1172/JCI154309</p>
+        </div>
+        <div class="research-cta">
+          <div class="research-cta-text"><h4>¿Consultas sobre Tirzepatida para investigación?</h4><p>Disponibilidad de compuestos de grado investigación. Sin fines clínicos ni terapéuticos.</p></div>
+          <a href="https://wa.me/525527962437" target="_blank" rel="noopener noreferrer" class="wa-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Consultas Científicas</a>
+        </div>
+        <div class="related"><h3>Artículos relacionados</h3><div class="related-grid"><a href="#semaglutide-vs-tirzepatida" class="related-card"><span class="article-tag tag-metabolico" style="font-size:0.58rem;padding:0.22rem 0.55rem">Metabólico</span><h4>¿En qué se diferencia Semaglutide de Tirzepatida?</h4></a><a href="#retatrutide" class="related-card"><span class="article-tag tag-metabolico" style="font-size:0.58rem;padding:0.22rem 0.55rem">Metabólico</span><h4>Retatrutide: el triple agonista que va más allá del GLP-1</h4></a></div></div>
+      </main>
+      <footer><div class="footer-left"><a class="footer-brand" href="#"><svg width="24" height="24" viewBox="0 0 32 32" fill="none"><path d="M16 2C16 2 7 11 7 19C7 23.9706 11.0294 28 16 28C20.9706 28 25 23.9706 25 19C25 11 16 2 16 2Z" fill="#0D8A6E"/><path d="M16 9L11.5 16H20.5L16 9Z" fill="white" opacity="0.55"/></svg><span class="footer-brand-text">BIOFILLERS</span></a><div class="footer-links"><a class="footer-link" href="#disclaimer">Aviso Legal</a><a class="footer-link" href="#tendencias">Artículos</a><a class="footer-link" href="#compuestos">Compuestos</a></div></div><p class="footer-copy">Solo para fines de investigación y educación. No se hacen afirmaciones terapéuticas. © 2026 Biofillers Research.</p></footer>
+    </div>
+
+    <!-- VIEW: SEMAGLUTIDE VS TIRZEPATIDA -->
+    <div id="view-semaglutide-vs-tirzepatida" class="view">
+      <main class="article-wrap">
+        <nav class="breadcrumb"><a href="#">Inicio</a><span>›</span><a href="#tendencias">Tendencias</a><span>›</span><span style="color:var(--text-soft)">Semaglutide vs Tirzepatida</span></nav>
+        <div class="article-meta"><span class="article-tag tag-metabolico">Metabólico</span><span class="article-read-time">5 min lectura · Investigación 2026</span></div>
+        <h1 class="article-h1">¿En qué se diferencia Semaglutide de Tirzepatida?</h1>
+        <p class="article-lead">Semaglutida y tirzepatida comparten el mecanismo GLP-1 pero difieren en su arquitectura molecular y espectro de acción. Esta comparativa analiza las diferencias mecanicistas relevantes para la investigación.</p>
+        <div class="article-body">
+          <h2>Semaglutida: el agonista GLP-1 de referencia</h2>
+          <p>La semaglutida es un análogo del GLP-1 humano con una homología del ~94%. La sustitución de Ala→Aib en posición 2 la protege de la degradación por DPP-4. Su cadena de ácido graso C18 (ligada mediante un espaciador de dos residuos de mini-PEG y ácido glutámico) permite la unión reversible a albúmina sérica, logrando una vida media aproximada de 7 días en humanos.</p>
+          <p>Actúa exclusivamente sobre el receptor GLP-1R, presente en células β pancreáticas, tracto gastrointestinal, sistema nervioso central (núcleo arcuato, área postrema) y corazón. Su acción central sobre el hipotálamo se estudia como el mecanismo principal de reducción del apetito.</p>
+          <h2>Tirzepatida: arquitectura basada en GIP</h2>
+          <p>La tirzepatida parte de la secuencia del GIP humano (no del GLP-1) con modificaciones que le confieren actividad sobre GLP-1R. Esta elección de base estructural no es trivial: el GIP y el GLP-1 tienen secuencias distintas y sus receptores, aunque ambos son GPCRs acoplados a Gs, tienen distribuciones tisulares parcialmente diferentes.</p>
+          <p>El GIPR se expresa en tejido adiposo, hueso, estómago e hipotálamo (distribución distinta al GLP-1R). La activación de GIPR en adipocitos se estudia por su efecto sobre la lipogénesis y la liberación de adipokinas, un mecanismo que semaglutida no activa.</p>
+          <div class="info-box"><p class="info-box-label">Debate científico activo</p><p>El rol del GIPR en el SNC para el control del apetito es objeto de investigación activa. Algunos estudios sugieren que la activación de GIPR hipotalámico potencia la señal de saciedad del GLP-1R; otros proponen que los efectos de tirzepatida sobre composición corporal se explican principalmente por el agonismo GLP-1R aumentado. La cuestión no está resuelta.</p></div>
+          <h2>Comparativa mecanicista</h2>
+          <table class="compare-table"><thead><tr><th>Parámetro</th><th>Semaglutida</th><th>Tirzepatida</th></tr></thead><tbody><tr><td>Receptor primario</td><td>GLP-1R (único)</td><td>GLP-1R + GIPR</td></tr><tr><td>Base estructural</td><td>GLP-1 humano</td><td>GIP humano</td></tr><tr><td>Cadena lipídica</td><td>C18 (ác. esteárico)</td><td>C20 (ác. eicosadioico)</td></tr><tr><td>Vida media</td><td>~7 días</td><td>~5 días</td></tr><tr><td>Reducción HbA1c (ensayos de cabeza)</td><td>1.86% (SURPASS-2)</td><td>2.01–2.30% (SURPASS-2)</td></tr><tr><td>Tejidos adicionales</td><td>—</td><td>Adipocitos, hueso (GIPR)</td></tr><tr><td>Estudio directo</td><td>SUSTAIN, STEP</td><td>SURPASS, SURMOUNT</td></tr></tbody></table>
+          <h2>Implicaciones para la investigación</h2>
+          <p>Las diferencias en el espectro receptor abren líneas de investigación distintas. Semaglutida es la herramienta farmacológica de referencia para estudiar la señalización GLP-1R aislada. Tirzepatida permite explorar la contribución diferencial del GIPR cuando ambos receptores se activan simultáneamente. El uso combinado de agonistas selectivos e inespecíficos permite diseñar experimentos de disección mecanicista.</p>
+        </div>
+        <div class="research-cta"><div class="research-cta-text"><h4>¿Consultas sobre péptidos metabólicos para investigación?</h4><p>Disponibilidad de compuestos de grado investigación. Sin fines clínicos ni terapéuticos.</p></div><a href="https://wa.me/525527962437" target="_blank" rel="noopener noreferrer" class="wa-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Consultas Científicas</a></div>
+        <div class="related"><h3>Artículos relacionados</h3><div class="related-grid"><a href="#tirzepatida" class="related-card"><span class="article-tag tag-metabolico" style="font-size:0.58rem;padding:0.22rem 0.55rem">Control de Peso</span><h4>¿Qué es la Tirzepatida y cómo funciona?</h4></a><a href="#retatrutide" class="related-card"><span class="article-tag tag-metabolico" style="font-size:0.58rem;padding:0.22rem 0.55rem">Metabólico</span><h4>Retatrutide: el triple agonista que va más allá del GLP-1</h4></a></div></div>
+      </main>
+      <footer><div class="footer-left"><a class="footer-brand" href="#"><svg width="24" height="24" viewBox="0 0 32 32" fill="none"><path d="M16 2C16 2 7 11 7 19C7 23.9706 11.0294 28 16 28C20.9706 28 25 23.9706 25 19C25 11 16 2 16 2Z" fill="#0D8A6E"/><path d="M16 9L11.5 16H20.5L16 9Z" fill="white" opacity="0.55"/></svg><span class="footer-brand-text">BIOFILLERS</span></a><div class="footer-links"><a class="footer-link" href="#disclaimer">Aviso Legal</a><a class="footer-link" href="#tendencias">Artículos</a><a class="footer-link" href="#compuestos">Compuestos</a></div></div><p class="footer-copy">Solo para fines de investigación y educación. No se hacen afirmaciones terapéuticas. © 2026 Biofillers Research.</p></footer>
+    </div>
+
+    <!-- VIEW: RETATRUTIDE -->
+    <div id="view-retatrutide" class="view">
+      <main class="article-wrap">
+        <nav class="breadcrumb"><a href="#">Inicio</a><span>›</span><a href="#tendencias">Tendencias</a><span>›</span><span style="color:var(--text-soft)">Retatrutide</span></nav>
+        <div class="article-meta"><span class="article-tag tag-metabolico">Metabólico</span><span class="article-read-time">6 min lectura · Investigación 2026</span></div>
+        <h1 class="article-h1">Retatrutide: el triple agonista que va más allá del GLP-1</h1>
+        <p class="article-lead">Retatrutide activa simultáneamente los receptores GLP-1, GIP y glucagón. La adición del receptor de glucagón al perfil de agonismo introduce mecanismos metabólicos no cubiertos por los dobles agonistas, incluyendo termogénesis hepática y gasto energético en reposo.</p>
+        <div class="article-body">
+          <h2>El tercer receptor: glucagón y su rol metabólico</h2>
+          <p>Los receptores GLP-1 y GIP se estudian en el contexto de la regulación del apetito y la secreción insulínica. El receptor de glucagón (GcgR) añade una dimensión diferente: la estimulación de GcgR en el hígado activa la gluconeogénesis y la glucogenólisis, y en tejido adiposo marrón promueve la termogénesis.</p>
+          <p>La aparente paradoja de activar el GcgR (efecto glucémico) junto a GLP-1R (efecto insulinogénico) se resuelve en el contexto del balance energético total: la activación de GcgR en tejido adiposo marrón y hígado aumenta el gasto calórico basal, mientras que la co-activación de GLP-1R mantiene el control glucémico. Los estudios de fase II muestran que este equilibrio resulta en un perfil metabólico diferenciado.</p>
+          <div class="info-box"><p class="info-box-label">Mecanismo diferenciador</p><p>A diferencia de tirzepatida, retatrutide activa GcgR en tejido adiposo marrón, promoviendo termogénesis mediada por UCP-1 (proteína desacopladora 1). Este mecanismo aumenta el gasto energético en reposo y no está presente en agonistas GLP-1 o GLP-1/GIP puros.</p></div>
+          <h2>Datos de los ensayos de fase II</h2>
+          <p>El estudio de fase II de retatrutide (NCT04881760, publicado en NEJM 2023) evaluó dosis de 1, 4, 8 y 12 mg semanales en 338 participantes durante 24 semanas, con extensión a 48 semanas. Los hallazgos reportados incluyen: reducción media de peso corporal de ~17.5% a 24 semanas con la dosis de 12 mg y ~24% a 48 semanas.</p>
+          <p>Los investigadores señalan que la magnitud de estos efectos en un estudio de fase II supera lo documentado para agonistas de menor espectro a dosis comparables, aunque la comparación directa entre moléculas distintas tiene limitaciones metodológicas inherentes.</p>
+          <h2>Comparativa de espectro de acción</h2>
+          <table class="compare-table"><thead><tr><th>Compuesto</th><th>GLP-1R</th><th>GIPR</th><th>GcgR</th><th>Termogénesis</th></tr></thead><tbody><tr><td>Semaglutida</td><td>✓</td><td>—</td><td>—</td><td>No documentada</td></tr><tr><td>Tirzepatida</td><td>✓</td><td>✓</td><td>—</td><td>No documentada</td></tr><tr><td>Retatrutide</td><td>✓</td><td>✓</td><td>✓</td><td>Sí (UCP-1, tejido adiposo marrón)</td></tr></tbody></table>
+          <h2>Implicaciones para la investigación</h2>
+          <p>El triple agonismo representa una estrategia de investigación para explorar la contribución independiente y sinérgica de cada receptor al metabolismo energético. Los investigadores utilizan agonistas selectivos de cada receptor como controles para diseccionar qué componente del efecto metabólico corresponde a cada vía.</p>
+          <p>Los estudios de fase III están en curso. La caracterización completa del perfil de seguridad a largo plazo y la identificación de biomarcadores predictivos de respuesta son las prioridades actuales de la investigación clínica.</p>
+        </div>
+        <div class="research-cta"><div class="research-cta-text"><h4>¿Consultas sobre Retatrutide para investigación?</h4><p>Disponibilidad de compuestos de grado investigación. Sin fines clínicos ni terapéuticos.</p></div><a href="https://wa.me/525527962437" target="_blank" rel="noopener noreferrer" class="wa-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Consultas Científicas</a></div>
+        <div class="related"><h3>Artículos relacionados</h3><div class="related-grid"><a href="#tirzepatida" class="related-card"><span class="article-tag tag-metabolico" style="font-size:0.58rem;padding:0.22rem 0.55rem">Control de Peso</span><h4>¿Qué es la Tirzepatida y cómo funciona?</h4></a><a href="#semaglutide-vs-tirzepatida" class="related-card"><span class="article-tag tag-metabolico" style="font-size:0.58rem;padding:0.22rem 0.55rem">Metabólico</span><h4>¿En qué se diferencia Semaglutide de Tirzepatida?</h4></a></div></div>
+      </main>
+      <footer><div class="footer-left"><a class="footer-brand" href="#"><svg width="24" height="24" viewBox="0 0 32 32" fill="none"><path d="M16 2C16 2 7 11 7 19C7 23.9706 11.0294 28 16 28C20.9706 28 25 23.9706 25 19C25 11 16 2 16 2Z" fill="#0D8A6E"/><path d="M16 9L11.5 16H20.5L16 9Z" fill="white" opacity="0.55"/></svg><span class="footer-brand-text">BIOFILLERS</span></a><div class="footer-links"><a class="footer-link" href="#disclaimer">Aviso Legal</a><a class="footer-link" href="#tendencias">Artículos</a><a class="footer-link" href="#compuestos">Compuestos</a></div></div><p class="footer-copy">Solo para fines de investigación y educación. No se hacen afirmaciones terapéuticas. © 2026 Biofillers Research.</p></footer>
+    </div>
+
+    <!-- VIEW: BPC-157 -->
+    <div id="view-bpc157" class="view">
+      <main class="article-wrap">
+        <nav class="breadcrumb"><a href="#">Inicio</a><span>›</span><a href="#tendencias">Tendencias</a><span>›</span><span style="color:var(--text-soft)">BPC-157</span></nav>
+        <div class="article-meta"><span class="article-tag tag-regeneracion">Regeneración</span><span class="article-read-time">5 min lectura · Investigación 2026</span></div>
+        <h1 class="article-h1">¿Cómo se investiga BPC-157 en recuperación de lesiones?</h1>
+        <p class="article-lead">BPC-157 (Body Protection Compound 157) es un pentadecapéptido sintético derivado de una proteína de jugo gástrico humano. La investigación explora sus mecanismos de acción sobre el sistema del óxido nítrico, la angiogénesis y la modulación de vías inflamatorias en modelos de lesión tisular.</p>
+        <div class="article-body">
+          <h2>Sistema del óxido nítrico y eNOS</h2>
+          <p>Uno de los mecanismos más estudiados de BPC-157 es su interacción con la vía del óxido nítrico. Los estudios preclínicos documentan que BPC-157 upregula la óxido nítrico sintasa endotelial (eNOS) en células endoteliales vasculares. El NO generado por eNOS actúa como vasodilatador, promueve la supervivencia celular endotelial y tiene propiedades antitrombóticas.</p>
+          <p>Esta actividad sobre la vía NO/eNOS se propone como uno de los mecanismos subyacentes a los efectos observados en modelos de cicatrización vascular y recuperación de flujo sanguíneo local en tejidos lesionados.</p>
+          <h2>Angiogénesis y VEGF</h2>
+          <p>BPC-157 se investiga por su capacidad de modular la expresión del factor de crecimiento endotelial vascular (VEGF) y sus receptores (VEGFR). La angiogénesis — formación de nuevos vasos sanguíneos desde vasos preexistentes — es un proceso central en la reparación de tejidos lesionados, ya que el suministro de oxígeno y nutrientes a través de nueva vasculatura es prerequisito para la proliferación de fibroblastos y la síntesis de matriz extracelular.</p>
+          <div class="info-box"><p class="info-box-label">Contexto preclínico</p><p>La mayoría de los estudios de BPC-157 son en modelos animales (rata, principalmente). Los mecanismos documentados incluyen modelos de rotura de tendón de Aquiles, lesiones musculares, úlceras gástricas, y lesiones de médula espinal. La extrapolación a humanos requiere estudios clínicos controlados que aún son limitados.</p></div>
+          <h2>Modulación de NF-κB y respuesta inflamatoria</h2>
+          <p>El factor nuclear NF-κB es un regulador maestro de la respuesta inflamatoria. Su activación promueve la expresión de citocinas proinflamatorias (IL-1β, TNF-α, IL-6) y enzimas como la COX-2. Los estudios de BPC-157 reportan efectos moduladores sobre esta vía: reducción de la translocación nuclear de NF-κB en modelos de inflamación experimental, con reducción consiguiente en el perfil de citocinas inflamatorias.</p>
+          <h2>Sinergias con TB-500</h2>
+          <p>TB-500 (fragmento 17–23 de Timosina β4) se investiga por mecanismos complementarios al BPC-157: migración celular mediada por actina-G, lamelipodios y efecto sobre el citoesqueleto. La combinación BPC-157 + TB-500 se estudia por la hipótesis de que la acción conjunta sobre vías independientes (NO/VEGF vs. actina/migración) podría potenciar la respuesta regenerativa. Actualmente los datos son principalmente preclínicos.</p>
+          <h2>Estado de la evidencia</h2>
+          <p>La evidencia disponible para BPC-157 es predominantemente preclínica. Los estudios en humanos son escasos, pequeños y con limitaciones metodológicas. Los mecanismos descritos en modelos animales son científicamente plausibles y reproducibles en múltiples laboratorios, pero la translación clínica requiere ensayos controlados y aleatorizados que aún no existen en número suficiente para establecer conclusiones definitivas.</p>
+        </div>
+        <div class="research-cta"><div class="research-cta-text"><h4>¿Consultas sobre BPC-157 para investigación?</h4><p>Disponibilidad de compuestos de grado investigación. Sin fines clínicos ni terapéuticos.</p></div><a href="https://wa.me/525527962437" target="_blank" rel="noopener noreferrer" class="wa-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Consultas Científicas</a></div>
+        <div class="related"><h3>Artículos relacionados</h3><div class="related-grid"><a href="#nad" class="related-card"><span class="article-tag tag-longevidad" style="font-size:0.58rem;padding:0.22rem 0.55rem">Longevidad</span><h4>NAD⁺ y envejecimiento celular: qué dice la ciencia actual</h4></a><a href="#nootropicos" class="related-card"><span class="article-tag tag-cognitivo" style="font-size:0.58rem;padding:0.22rem 0.55rem">Cognitivo</span><h4>Semax y Selank: investigación en péptidos nootrópicos</h4></a></div></div>
+      </main>
+      <footer><div class="footer-left"><a class="footer-brand" href="#"><svg width="24" height="24" viewBox="0 0 32 32" fill="none"><path d="M16 2C16 2 7 11 7 19C7 23.9706 11.0294 28 16 28C20.9706 28 25 23.9706 25 19C25 11 16 2 16 2Z" fill="#0D8A6E"/><path d="M16 9L11.5 16H20.5L16 9Z" fill="white" opacity="0.55"/></svg><span class="footer-brand-text">BIOFILLERS</span></a><div class="footer-links"><a class="footer-link" href="#disclaimer">Aviso Legal</a><a class="footer-link" href="#tendencias">Artículos</a><a class="footer-link" href="#compuestos">Compuestos</a></div></div><p class="footer-copy">Solo para fines de investigación y educación. No se hacen afirmaciones terapéuticas. © 2026 Biofillers Research.</p></footer>
+    </div>
+
+    <!-- VIEW: NAD+ -->
+    <div id="view-nad" class="view">
+      <main class="article-wrap">
+        <nav class="breadcrumb"><a href="#">Inicio</a><span>›</span><a href="#tendencias">Tendencias</a><span>›</span><span style="color:var(--text-soft)">NAD⁺ y Longevidad</span></nav>
+        <div class="article-meta"><span class="article-tag tag-longevidad">Longevidad</span><span class="article-read-time">6 min lectura · Investigación 2026</span></div>
+        <h1 class="article-h1">NAD⁺ y envejecimiento celular: qué dice la ciencia actual</h1>
+        <p class="article-lead">El NAD⁺ (nicotinamida adenina dinucleótido) es una coenzima presente en todas las células vivas. Su rol como sustrato de sirtuinas y PARPs lo coloca en el centro de la biología del envejecimiento. Aquí exploramos qué dice la investigación actual sobre NAD⁺ y por qué los científicos de longevidad lo estudian intensamente.</p>
+        <div class="article-body">
+          <h2>¿Qué es el NAD⁺ y por qué importa?</h2>
+          <p>El NAD⁺ es una coenzima de dos nucleótidos que participa en cientos de reacciones redox en el metabolismo celular. Opera como aceptor de electrones en la glucólisis, el ciclo de Krebs y la cadena de transporte de electrones, siendo fundamental para la generación de ATP mitocondrial.</p>
+          <p>Más allá de su rol redox, el NAD⁺ es también un <strong>sustrato de consumo</strong> para sirtuinas (desacetilasas dependientes de NAD⁺) y PARPs (poli-ADP-ribosa polimerasas). Esta dualidad hace que sus niveles sean determinantes tanto para el metabolismo energético como para la regulación epigenética y la reparación del ADN.</p>
+          <h2>El declive del NAD⁺ con la edad</h2>
+          <p>Los niveles tisulares de NAD⁺ disminuyen progresivamente con la edad — con caídas reportadas de hasta 50% entre los 20 y los 60 años en algunos tejidos. Los mecanismos propuestos incluyen:</p>
+          <ul><li><strong>Mayor consumo por PARPs:</strong> La acumulación de daño al ADN activa las PARPs crónicamente, consumiendo NAD⁺ para síntesis de polímeros de ADP-ribosa.</li><li><strong>Menor biosíntesis:</strong> La vía de rescate del NAD⁺ muestra menor actividad en tejidos envejecidos, posiblemente por reducción en la expresión de NAMPT (enzima limitante).</li><li><strong>Inflamación crónica:</strong> Las enzimas CD38 y CD157, que consumen NAD⁺, se uppregulan en procesos inflamatorios crónicos asociados al envejecimiento.</li></ul>
+          <div class="info-box"><p class="info-box-label">Concepto central</p><p>El declive del NAD⁺ no es solo consecuencia del envejecimiento — los investigadores exploran si es también una causa. La hipótesis es que el NAD⁺ bajo compromete la actividad de sirtuinas y la reparación del ADN, creando un ciclo que acelera el envejecimiento celular.</p></div>
+          <h2>Sirtuinas: reguladores epigenéticos dependientes de NAD⁺</h2>
+          <p>Las sirtuinas (SIRT1–SIRT7) son desacetilasas que requieren NAD⁺ como cosustrato. Sus sustratos incluyen histonas (regulación epigenética), p53 (respuesta al daño al ADN), PGC-1α (biogénesis mitocondrial) y Fox0 (respuesta al estrés oxidativo). Sin NAD⁺, no funcionan.</p>
+          <h2>NAD⁺ y reparación del ADN</h2>
+          <p>Las PARPs (especialmente PARP1) son las principales consumidoras de NAD⁺ en estrés genotóxico. La activación de PARP1 en sitios de ruptura de ADN puede consumir cantidades masivas de NAD⁺ en minutos. La investigación explora si la suplementación con precursores de NAD⁺ puede mantener la capacidad de reparación del ADN en células envejecidas.</p>
+          <h2>Estado actual de la investigación clínica</h2>
+          <p>Los ensayos clínicos con precursores de NAD⁺ (NMN y NR) han mostrado que la suplementación oral efectivamente eleva los niveles de NAD⁺ en sangre y tejido muscular en humanos, con buena tolerabilidad. Sin embargo, los estudios con endpoints clínicos relevantes son aún pequeños y de corta duración. La correlación entre niveles elevados de NAD⁺ y efectos funcionales medibles en humanos está en proceso de establecerse.</p>
+        </div>
+        <div class="research-cta"><div class="research-cta-text"><h4>¿Consultas sobre NAD⁺ para investigación?</h4><p>Disponibilidad de compuestos de grado investigación. Sin fines clínicos ni terapéuticos.</p></div><a href="https://wa.me/525527962437" target="_blank" rel="noopener noreferrer" class="wa-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Consultas Científicas</a></div>
+        <div class="related"><h3>Artículos relacionados</h3><div class="related-grid"><a href="#bpc157" class="related-card"><span class="article-tag tag-regeneracion" style="font-size:0.58rem;padding:0.22rem 0.55rem">Regeneración</span><h4>¿Cómo se investiga BPC-157 en recuperación de lesiones?</h4></a><a href="#nootropicos" class="related-card"><span class="article-tag tag-cognitivo" style="font-size:0.58rem;padding:0.22rem 0.55rem">Cognitivo</span><h4>Semax y Selank: investigación en péptidos nootrópicos</h4></a></div></div>
+      </main>
+      <footer><div class="footer-left"><a class="footer-brand" href="#"><svg width="24" height="24" viewBox="0 0 32 32" fill="none"><path d="M16 2C16 2 7 11 7 19C7 23.9706 11.0294 28 16 28C20.9706 28 25 23.9706 25 19C25 11 16 2 16 2Z" fill="#0D8A6E"/><path d="M16 9L11.5 16H20.5L16 9Z" fill="white" opacity="0.55"/></svg><span class="footer-brand-text">BIOFILLERS</span></a><div class="footer-links"><a class="footer-link" href="#disclaimer">Aviso Legal</a><a class="footer-link" href="#tendencias">Artículos</a><a class="footer-link" href="#compuestos">Compuestos</a></div></div><p class="footer-copy">Solo para fines de investigación y educación. No se hacen afirmaciones terapéuticas. © 2026 Biofillers Research.</p></footer>
+    </div>
+
+    <!-- VIEW: NOOTROPICOS -->
+    <div id="view-nootropicos" class="view">
+      <main class="article-wrap">
+        <nav class="breadcrumb"><a href="#">Inicio</a><span>›</span><a href="#tendencias">Tendencias</a><span>›</span><span style="color:var(--text-soft)">Péptidos Cognitivos</span></nav>
+        <div class="article-meta"><span class="article-tag tag-cognitivo">Cognitivo</span><span class="article-read-time">5 min lectura · Investigación 2026</span></div>
+        <h1 class="article-h1">Semax y Selank: investigación en péptidos nootrópicos</h1>
+        <p class="article-lead">Semax y Selank son neuropéptidos sintéticos desarrollados en el Instituto de Biología Molecular de la Academia de Ciencias de Rusia. La investigación explora su rol en la expresión de BDNF, modulación del sistema GABAérgico y sus posibles efectos en la fisiología del estrés y la función cognitiva en modelos experimentales.</p>
+        <div class="article-body">
+          <h2>Semax: análogo de ACTH y expresión de BDNF</h2>
+          <p>Semax (Met-Glu-His-Phe-Pro-Gly-Pro) es un heptapéptido derivado de la secuencia 4-10 de la ACTH. A diferencia de la ACTH completa, carece de actividad corticotropa — no estimula la liberación de cortisol adrenal. Su actividad se concentra en el SNC.</p>
+          <p>El mecanismo de mayor interés investigativo es su efecto sobre la expresión del <strong>factor neurotrófico derivado del cerebro (BDNF)</strong>. Los estudios en modelos animales documentan que Semax upregula BDNF en la corteza prefrontal e hipocampo, regiones críticas para la consolidación de memoria y el aprendizaje.</p>
+          <div class="info-box"><p class="info-box-label">Mecanismo principal</p><p>Semax → upregulación de BDNF y NGF → mayor densidad sináptica en hipocampo y corteza prefrontal. Los estudios en modelos de isquemia cerebral también exploran efectos neuroprotectores vía reducción de NF-κB y citocinas proinflamatorias.</p></div>
+          <h2>Selank: modulación GABAérgica y eje del estrés</h2>
+          <p>Selank (Thr-Lys-Pro-Arg-Pro-Gly-Pro) es un heptapéptido derivado de la tuftsin. Se investiga primariamente por su modulación del sistema GABAérgico y del eje HPA. Los estudios en modelos animales reportan que Selank interactúa con receptores GABA-A de forma alostérica — de manera similar a las benzodiazepinas pero con un perfil de selectividad diferente que evita efectos sedantes marcados.</p>
+          <table class="compare-table"><thead><tr><th>Característica</th><th>Semax</th><th>Selank</th></tr></thead><tbody><tr><td>Origen estructural</td><td>ACTH (4–10)</td><td>Tuftsin (Thr-Lys-Pro-Arg)</td></tr><tr><td>Sistema principal</td><td>Neurotrófico (BDNF/NGF)</td><td>GABAérgico / HPA</td></tr><tr><td>Vida media aprox.</td><td>~2–3 min (intranasal)</td><td>~2–5 min (intranasal)</td></tr><tr><td>Efectos sedativos</td><td>No documentados</td><td>Mínimos en estudios animales</td></tr><tr><td>Estudios en humanos</td><td>Fase I–II (Rusia/Europa)</td><td>Fase I–II (Rusia)</td></tr></tbody></table>
+          <h2>Estado de la investigación</h2>
+          <p>La mayor parte de la evidencia publicada proviene de estudios rusos y ucranianos, con limitaciones metodológicas que incluyen tamaños de muestra pequeños y escasez de estudios multicéntricos de alta potencia. Ambos compuestos han completado ensayos de fase I y II con perfiles de seguridad descritos como favorables. La replicación independiente fuera de los grupos de origen es limitada.</p>
+        </div>
+        <div class="research-cta"><div class="research-cta-text"><h4>¿Consultas sobre péptidos cognitivos para investigación?</h4><p>Disponibilidad de compuestos de grado investigación. Sin fines clínicos ni terapéuticos.</p></div><a href="https://wa.me/525527962437" target="_blank" rel="noopener noreferrer" class="wa-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Consultas Científicas</a></div>
+        <div class="related"><h3>Artículos relacionados</h3><div class="related-grid"><a href="#nad" class="related-card"><span class="article-tag tag-longevidad" style="font-size:0.58rem;padding:0.22rem 0.55rem">Longevidad</span><h4>NAD⁺ y envejecimiento celular: qué dice la ciencia actual</h4></a><a href="#bpc157" class="related-card"><span class="article-tag tag-regeneracion" style="font-size:0.58rem;padding:0.22rem 0.55rem">Regeneración</span><h4>¿Cómo se investiga BPC-157 en recuperación de lesiones?</h4></a></div></div>
+      </main>
+      <footer><div class="footer-left"><a class="footer-brand" href="#"><svg width="24" height="24" viewBox="0 0 32 32" fill="none"><path d="M16 2C16 2 7 11 7 19C7 23.9706 11.0294 28 16 28C20.9706 28 25 23.9706 25 19C25 11 16 2 16 2Z" fill="#0D8A6E"/><path d="M16 9L11.5 16H20.5L16 9Z" fill="white" opacity="0.55"/></svg><span class="footer-brand-text">BIOFILLERS</span></a><div class="footer-links"><a class="footer-link" href="#disclaimer">Aviso Legal</a><a class="footer-link" href="#tendencias">Artículos</a><a class="footer-link" href="#compuestos">Compuestos</a></div></div><p class="footer-copy">Solo para fines de investigación y educación. No se hacen afirmaciones terapéuticas. © 2026 Biofillers Research.</p></footer>
+    </div>
+
+    <!-- VIEW: DISCLAIMER -->
+    <div id="view-disclaimer" class="view">
+      <div class="disclaimer-hero"><h1>Aviso Legal y Declaración de Investigación</h1><p>Lea este aviso cuidadosamente antes de utilizar cualquier información publicada en este sitio web.</p></div>
+      <main class="disclaimer-wrap">
+        <div class="toc"><h3>Contenido</h3><ol><li><a href="#" onclick="document.getElementById('ds1').scrollIntoView({behavior:'smooth'});return false;">Propósito del sitio</a></li><li><a href="#" onclick="document.getElementById('ds2').scrollIntoView({behavior:'smooth'});return false;">Definición de "grado investigación"</a></li><li><a href="#" onclick="document.getElementById('ds3').scrollIntoView({behavior:'smooth'});return false;">A quién va dirigido</a></li><li><a href="#" onclick="document.getElementById('ds4').scrollIntoView({behavior:'smooth'});return false;">Lo que el sitio NO es</a></li><li><a href="#" onclick="document.getElementById('ds5').scrollIntoView({behavior:'smooth'});return false;">Marco regulatorio aplicable</a></li><li><a href="#" onclick="document.getElementById('ds6').scrollIntoView({behavior:'smooth'});return false;">Contacto</a></li></ol></div>
+        <div class="dsection" id="ds1"><p class="dsection-label">Sección 01</p><h2>Propósito del sitio</h2><p>Este sitio web es operado por <strong>Biofillers Research</strong> con el propósito exclusivo de difundir información científica y educativa sobre péptidos y compuestos de grado investigación. Los artículos, fichas y materiales publicados están redactados para profesionales de la salud, investigadores, estudiantes de ciencias biomédicas y personas con formación científica.</p><p>Toda la información publicada tiene carácter informativo-educativo. Los textos describen lo que se estudia en el ámbito de la investigación científica: no describen indicaciones clínicas, protocolos de tratamiento ni evidencia suficiente para uso en humanos o animales.</p><div class="highlight-box"><p><strong>Principio rector:</strong> Los compuestos mencionados en este sitio se encuentran en etapas de investigación básica y preclínica, o en fases clínicas tempranas. El hecho de que un compuesto sea estudiado científicamente no implica que cuente con aprobación regulatoria para uso terapéutico en ninguna jurisdicción.</p></div></div>
+        <div class="section-divider"></div>
+        <div class="dsection" id="ds2"><p class="dsection-label">Sección 02</p><h2>Definición de "grado investigación"</h2><p>El término <strong>"grado investigación"</strong> hace referencia a compuestos producidos con estándares de pureza analítica certificada para uso en estudios de laboratorio <em>in vitro</em> e <em>in vivo</em> en modelos de investigación. Se caracterizan por:</p><ul><li>Contar con certificados de análisis (CoA) que verifican identidad, pureza y ausencia de contaminantes relevantes.</li><li>No estar formulados, dosificados ni empacados para uso en seres humanos.</li><li>No contar con aprobación de COFEPRIS, FDA, EMA u otros para uso terapéutico, preventivo ni diagnóstico.</li><li>Estar destinados a laboratorios, instituciones académicas e investigadores con instalaciones y protocolos adecuados.</li></ul></div>
+        <div class="section-divider"></div>
+        <div class="dsection" id="ds3"><p class="dsection-label">Sección 03</p><h2>A quién va dirigido este sitio</h2><p>El contenido está dirigido exclusivamente a: investigadores y científicos con acceso a laboratorios equipados; médicos, farmacéuticos y profesionales de la salud con fines académicos; estudiantes de posgrado en ciencias biomédicas; y periodistas científicos que requieran contexto técnico.</p></div>
+        <div class="section-divider"></div>
+        <div class="dsection" id="ds4"><p class="dsection-label">Sección 04</p><h2>Lo que este sitio NO es</h2><div class="no-box"><h3>Este sitio no constituye</h3><ul><li>Consejo médico, diagnóstico, o recomendación terapéutica de ningún tipo.</li><li>Una farmacia, tienda en línea, o plataforma de venta de medicamentos o suplementos.</li><li>Una fuente de protocolos de uso humano o veterinario de los compuestos mencionados.</li><li>Una afirmación de que cualquier compuesto descrito es seguro o eficaz para ninguna condición médica.</li><li>Un sustituto de la consulta con profesionales de salud calificados.</li></ul></div><p>Biofillers Research no hace afirmaciones sobre los beneficios terapéuticos de ningún compuesto. El lenguaje utilizado describe lo que se <em>investiga</em>, no lo que un compuesto "hace" o "produce" en seres humanos.</p></div>
+        <div class="section-divider"></div>
+        <div class="dsection" id="ds5"><p class="dsection-label">Sección 05</p><h2>Marco regulatorio aplicable</h2><p>Los péptidos de investigación están sujetos a diferentes marcos regulatorios según la jurisdicción. En México, la <strong>COFEPRIS</strong> regula los medicamentos. Los compuestos de grado investigación no están registrados como medicamentos ante COFEPRIS y su uso clínico sin autorización puede contravenir la normatividad vigente. Es responsabilidad del usuario informarse y cumplir con la regulación vigente en su jurisdicción.</p></div>
+        <div class="section-divider"></div>
+        <div class="dsection" id="ds6"><p class="dsection-label">Sección 06</p><h2>Contacto</h2><p>Para consultas sobre disponibilidad de compuestos para proyectos de investigación o solicitudes de información técnica:</p><div class="contact-grid"><div class="contact-card"><h4>Consultas científicas</h4><p>Para investigadores y profesionales. Disponibilidad de compuestos de grado investigación y documentación técnica.</p><p style="margin-top:0.75rem"><a href="https://wa.me/525527962437" target="_blank" rel="noopener noreferrer">WhatsApp: +52 55 2796 2437</a></p></div><div class="contact-card"><h4>Información general</h4><p>Para preguntas sobre el contenido del sitio, correcciones editoriales o solicitudes de aclaración.</p><p style="margin-top:0.75rem"><a href="mailto:adrgaga603@gmail.com">Correo electrónico</a></p></div></div></div>
+        <p style="font-size:0.72rem;color:var(--text-muted);font-style:italic;text-align:right;margin-top:3rem">Última actualización: Junio 2026</p>
+      </main>
+      <footer><div class="footer-left"><a class="footer-brand" href="#"><svg width="24" height="24" viewBox="0 0 32 32" fill="none"><path d="M16 2C16 2 7 11 7 19C7 23.9706 11.0294 28 16 28C20.9706 28 25 23.9706 25 19C25 11 16 2 16 2Z" fill="#0D8A6E"/><path d="M16 9L11.5 16H20.5L16 9Z" fill="white" opacity="0.55"/></svg><span class="footer-brand-text">BIOFILLERS</span></a><div class="footer-links"><a class="footer-link" href="#">Inicio</a><a class="footer-link" href="#tendencias">Artículos</a><a class="footer-link" href="#compuestos">Compuestos</a></div></div><p class="footer-copy">Solo para fines de investigación y educación. No se hacen afirmaciones terapéuticas. © 2026 Biofillers Research.</p></footer>
+    </div>
+
+    <!-- ═══ JS ROUTER ═══════════════════════════════════════════════ -->
     <script>
+        const ARTICLE_VIEWS = {
+            'tirzepatida':               'view-tirzepatida',
+            'semaglutide-vs-tirzepatida':'view-semaglutide-vs-tirzepatida',
+            'retatrutide':               'view-retatrutide',
+            'bpc157':                    'view-bpc157',
+            'nad':                       'view-nad',
+            'nootropicos':               'view-nootropicos',
+            'disclaimer':                'view-disclaimer'
+        };
+        const HOME_SECTIONS = ['tendencias','compuestos','nosotros'];
+
+        function showView(id) {
+            document.querySelectorAll('.view').forEach(v => { v.style.display = 'none'; v.classList.remove('active'); });
+            const el = document.getElementById(id);
+            if (el) { el.style.display = 'block'; el.classList.add('active'); }
+            window.scrollTo(0, 0);
+        }
+
+        function handleHash() {
+            const hash = location.hash.slice(1);
+            if (ARTICLE_VIEWS[hash]) {
+                showView(ARTICLE_VIEWS[hash]);
+            } else {
+                showView('view-home');
+                if (hash && HOME_SECTIONS.includes(hash)) {
+                    requestAnimationFrame(() => {
+                        const sec = document.getElementById(hash);
+                        if (sec) sec.scrollIntoView({ behavior: 'smooth' });
+                    });
+                }
+            }
+        }
+
+        window.addEventListener('hashchange', handleHash);
+        window.addEventListener('load', handleHash);
+
         function filterCards(category, btn) {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             document.querySelectorAll('.peptide-card').forEach(card => {
                 if (category === 'all' || card.dataset.category === category) {
                     card.style.display = '';
-                    void card.offsetWidth;
-                    card.style.animation = 'none';
-                    void card.offsetWidth;
-                    card.style.animation = '';
                 } else {
                     card.style.display = 'none';
                 }
             });
+        }
+
+        function toggleFaq(btn) {
+            btn.closest('.faq-item').classList.toggle('open');
         }
     </script>
 </body>
