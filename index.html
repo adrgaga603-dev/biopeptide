@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIOFILLERS — Centro de Investigación en Péptidos 2026</title>
+    <meta name="description" content="Recursos científicos, artículos y referencia de compuestos peptídicos para profesionales de la salud e investigadores. Solo fines educativos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --teal:        #0D8A6E;
+            --teal-dark:   #0A6B55;
+            --teal-glow:   rgba(13, 138, 110, 0.12);
+            --forest:      #2B3210;
+            --cream:       #FBFBEF;
+            --sand:        #E5E2D9;
+            --olive:       #505631;
+            --text:        #1C2A1A;
+            --text-soft:   #4D5E48;
+            --text-muted:  #8E9E88;
+            --strip-h:     36px;
+            --nav-h:       64px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: calc(var(--strip-h) + var(--nav-h));
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            overflow-x: hidden;
+            padding-top: calc(var(--strip-h) + var(--nav-h));
+        }
+
+        /* ─── COMPLIANCE STRIP ────────────────────────── */
+        .compliance-strip {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--strip-h);
+            z-index: 200;
+            background: var(--forest);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+        }
+
+        .compliance-strip p {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: rgba(255,255,255,0.75);
+            text-align: center;
+        }
+
+        .compliance-strip strong { color: white; }
+
+        .compliance-strip a {
+            color: rgba(13,138,110,0.9);
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .compliance-strip a:hover { color: var(--teal); }
+
+        /* ─── NAV ─────────────────────────────────────── */
+        nav {
+            position: fixed;
+            top: var(--strip-h);
+            left: 0;
+            width: 100%;
+            height: var(--nav-h);
+            z-index: 100;
+            padding: 0 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(251, 251, 239, 0.95);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(13, 138, 110, 0.1);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+            text-decoration: none;
+        }
+
+        .nav-logo-text {
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.18em;
+            color: var(--teal);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.75rem;
+        }
+
+        .nav-link {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            color: var(--text-soft);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover { color: var(--teal); }
+
+        .nav-badge {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--teal);
+            border: 1.5px solid var(--teal);
+            padding: 0.26rem 0.75rem;
+            border-radius: 20px;
+        }
+
+        /* ─── HERO ────────────────────────────────────── */
+        .hero {
+            min-height: calc(100vh - var(--strip-h));
+            background: var(--forest);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 6rem 4rem 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-glow {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 65% 55% at 72% 42%, rgba(13,138,110,0.2) 0%, transparent 65%),
+                radial-gradient(ellipse 30% 35% at 12% 80%, rgba(13,138,110,0.09) 0%, transparent 55%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(13,138,110,0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(13,138,110,0.06) 1px, transparent 1px);
+            background-size: 56px 56px;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+        }
+
+        .hero-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.67rem;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 1.5rem;
+            animation: fadeUp 0.7s ease both;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            display: block;
+            width: 2rem;
+            height: 1px;
+            background: var(--teal);
+            flex-shrink: 0;
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.6rem, 5.5vw, 5rem);
+            font-weight: 300;
+            line-height: 1.06;
+            color: var(--cream);
+            margin-bottom: 1.5rem;
+            animation: fadeUp 0.7s 0.1s ease both;
+        }
+
+        .hero-title em {
+            font-style: italic;
+            color: rgba(13, 138, 110, 0.88);
+        }
+
+        .hero-subtitle {
+            font-size: 0.92rem;
+            font-weight: 400;
+            line-height: 1.8;
+            color: rgba(251, 251, 239, 0.52);
+            max-width: 520px;
+            margin-bottom: 2.5rem;
+            animation: fadeUp 0.7s 0.2s ease both;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+            animation: fadeUp 0.7s 0.3s ease both;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--teal);
+            color: white;
+            text-decoration: none;
+            padding: 0.82rem 1.75rem;
+            border-radius: 4px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.06em;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); }
+        .btn-primary svg { transition: transform 0.2s; }
+        .btn-primary:hover svg { transform: translateX(3px); }
+
+        .btn-ghost-sm {
+            font-size: 0.76rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: rgba(251,251,239,0.38);
+            text-decoration: none;
+            transition: color 0.2s;
+            border-bottom: 1px solid rgba(251,251,239,0.15);
+            padding-bottom: 1px;
+        }
+
+        .btn-ghost-sm:hover { color: rgba(251,251,239,0.7); border-color: rgba(251,251,239,0.4); }
+
+        .hero-stats {
+            position: absolute;
+            bottom: 3.5rem;
+            right: 4rem;
+            display: flex;
+            gap: 3rem;
+            z-index: 1;
+            animation: fadeUp 0.7s 0.4s ease both;
+        }
+
+        .hero-stat { text-align: right; }
+
+        .hero-stat-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.75rem;
+            font-weight: 300;
+            color: var(--cream);
+            line-height: 1;
+        }
+
+        .hero-stat-label {
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(251,251,239,0.3);
+            margin-top: 0.2rem;
+        }
+
+        /* ─── SECTION SHARED ──────────────────────────── */
+        .section-eyebrow {
+            font-size: 0.63rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 0.45rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.4rem;
+            font-weight: 300;
+            color: var(--text);
+        }
+
+        /* ─── TENDENCIAS SECTION ──────────────────────── */
+        .tendencias {
+            padding: 6rem 4rem;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .tendencias-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--sand);
+        }
+
+        .tendencias-header-link {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            color: var(--teal);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: gap 0.2s;
+        }
+
+        .tendencias-header-link:hover { gap: 0.65rem; }
+
+        /* FEATURED ARTICLE CARD */
+        .featured-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: var(--forest);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            text-decoration: none;
+            transition: transform 0.25s, box-shadow 0.25s;
+            animation: fadeUp 0.6s 0.1s ease both;
+        }
+
+        .featured-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 56px rgba(43,50,16,0.15);
+        }
+
+        .featured-card-visual {
+            background:
+                radial-gradient(ellipse 80% 70% at 60% 50%, rgba(13,138,110,0.3) 0%, transparent 70%),
+                var(--forest);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 260px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-card-visual-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(13,138,110,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(13,138,110,0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .featured-card-visual-icon {
+            position: relative;
+            z-index: 1;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 6rem;
+            font-weight: 300;
+            font-style: italic;
+            color: rgba(13,138,110,0.5);
+            line-height: 1;
+            user-select: none;
+        }
+
+        .featured-card-body {
+            padding: 2.25rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .featured-card-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .article-tag {
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.26rem 0.65rem;
+            border-radius: 3px;
+        }
+
+        .tag-metabolico    { background: rgba(61,90,10,0.15); color: #3D5A0A; }
+        .tag-regeneracion  { background: rgba(10,107,85,0.12); color: #0A6B55; }
+        .tag-longevidad    { background: rgba(26,58,90,0.12); color: #1A3A5A; }
+        .tag-cognitivo     { background: rgba(122,74,26,0.12); color: #7A4A1A; }
+        .tag-hormonal      { background: rgba(58,58,122,0.12); color: #3A3A7A; }
+
+        .read-time {
+            font-size: 0.68rem;
+            font-weight: 500;
+            color: rgba(251,251,239,0.4);
+        }
+
+        .featured-card-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.85rem;
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--cream);
+        }
+
+        .featured-card-desc {
+            font-size: 0.84rem;
+            line-height: 1.7;
+            color: rgba(251,251,239,0.5);
+        }
+
+        .featured-card-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            color: var(--teal);
+            margin-top: 0.25rem;
+        }
+
+        .featured-card-cta svg { transition: transform 0.2s; }
+        .featured-card:hover .featured-card-cta svg { transform: translateX(4px); }
+
+        /* ARTICLE CARD GRID */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+
+        .article-card {
+            background: white;
+            border: 1px solid var(--sand);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
+            animation: fadeUp 0.5s ease both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 100%; height: 3px;
+            background: var(--teal);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 36px rgba(43,50,16,0.08);
+            border-color: rgba(13,138,110,0.2);
+        }
+
+        .article-card:hover::before { transform: scaleX(1); }
+
+        .article-card-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .article-card-read-time {
+            font-size: 0.65rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .article-card-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.25;
+            color: var(--text);
+            flex: 1;
+        }
+
+        .article-card-desc {
+            font-size: 0.78rem;
+            line-height: 1.65;
+            color: var(--text-soft);
+        }
+
+        .article-card-link {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--teal);
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .article-card-link svg { transition: transform 0.2s; }
+        .article-card:hover .article-card-link svg { transform: translateX(3px); }
+
+        /* stagger */
+        .article-card:nth-child(1) { animation-delay: 0.05s; }
+        .article-card:nth-child(2) { animation-delay: 0.10s; }
+        .article-card:nth-child(3) { animation-delay: 0.15s; }
+        .article-card:nth-child(4) { animation-delay: 0.20s; }
+        .article-card:nth-child(5) { animation-delay: 0.25s; }
+
+        /* ─── COMPUESTOS SECTION ──────────────────────── */
+        .compuestos {
+            padding: 6rem 4rem;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .compuestos-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.75rem;
+            border-bottom: 1px solid var(--sand);
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .compuestos-header-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .section-count {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.5rem;
+            font-weight: 300;
+            color: var(--sand);
+            line-height: 1;
+        }
+
+        .wa-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 1.35rem;
+            border-radius: 4px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 0.76rem;
+            letter-spacing: 0.04em;
+            transition: background 0.2s, transform 0.2s;
+            white-space: nowrap;
+        }
+
+        .wa-btn:hover { background: #1faf58; transform: translateY(-1px); }
+
+        /* ─── FILTERS ─────────────────────────────────── */
+        .filters {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.36rem 1rem;
+            border-radius: 20px;
+            border: 1.5px solid var(--sand);
+            background: transparent;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.71rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            color: var(--text-soft);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover { border-color: var(--teal); color: var(--teal); }
+        .filter-btn.active { background: var(--teal); border-color: var(--teal); color: white; }
+
+        /* ─── PEPTIDE GRID ────────────────────────────── */
+        .peptide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+            gap: 1.3rem;
+        }
+
+        .peptide-card {
+            background: white;
+            border: 1px solid var(--sand);
+            border-radius: 8px;
+            padding: 1.65rem;
+            transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+            position: relative;
+            overflow: hidden;
+            animation: fadeUp 0.5s ease both;
+        }
+
+        .peptide-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 3px; height: 100%;
+            background: var(--teal);
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.3s ease;
+        }
+
+        .peptide-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 44px rgba(43,50,16,0.08);
+            border-color: rgba(13,138,110,0.18);
+        }
+
+        .peptide-card:hover::before { transform: scaleY(1); }
+
+        .peptide-card.flagship {
+            border-color: rgba(13,138,110,0.28);
+            background: linear-gradient(135deg, white 0%, rgba(13,138,110,0.025) 100%);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .card-category {
+            font-size: 0.59rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            padding: 0.27rem 0.62rem;
+            border-radius: 3px;
+        }
+
+        .cat-stack          { background: #F5F0E8; color: #7A5A0A; }
+        .cat-regeneracion   { background: #E8F5F0; color: #0A6B55; }
+        .cat-metabolico     { background: #EEF6E8; color: #3D5A0A; }
+        .cat-hormonal       { background: #EEF0F8; color: #3A3A7A; }
+        .cat-cognitivo      { background: #F5EEE8; color: #7A4A1A; }
+        .cat-longevidad     { background: #EEF2F6; color: #1A3A5A; }
+
+        .card-dosage {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .card-combo {
+            display: flex;
+            gap: 0.35rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.65rem;
+        }
+
+        .combo-pill {
+            font-size: 0.66rem;
+            font-weight: 600;
+            background: var(--cream);
+            border: 1px solid var(--sand);
+            color: var(--text-soft);
+            padding: 0.18rem 0.5rem;
+            border-radius: 3px;
+        }
+
+        .card-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.45rem;
+            font-weight: 400;
+            color: var(--text);
+            line-height: 1.15;
+            margin-bottom: 0.25rem;
+        }
+
+        .card-alias {
+            font-size: 0.66rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 0.85rem;
+        }
+
+        .card-format {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.68rem;
+            font-weight: 600;
+            color: var(--teal);
+            margin-bottom: 0.85rem;
+        }
+
+        .card-format::before {
+            content: '';
+            display: inline-block;
+            width: 5px; height: 5px;
+            border-radius: 50%;
+            background: var(--teal);
+            flex-shrink: 0;
+        }
+
+        .card-divider { height: 1px; background: var(--sand); margin: 0.85rem 0; }
+
+        .card-description {
+            font-size: 0.81rem;
+            line-height: 1.75;
+            color: var(--text-soft);
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            margin-top: 1.1rem;
+        }
+
+        .card-tag {
+            font-size: 0.59rem;
+            font-weight: 700;
+            letter-spacing: 0.07em;
+            color: var(--teal);
+            background: var(--teal-glow);
+            padding: 0.2rem 0.52rem;
+            border-radius: 2px;
+        }
+
+        .peptide-card:nth-child(1)  { animation-delay: 0.04s; }
+        .peptide-card:nth-child(2)  { animation-delay: 0.08s; }
+        .peptide-card:nth-child(3)  { animation-delay: 0.12s; }
+        .peptide-card:nth-child(4)  { animation-delay: 0.16s; }
+        .peptide-card:nth-child(5)  { animation-delay: 0.20s; }
+        .peptide-card:nth-child(6)  { animation-delay: 0.24s; }
+        .peptide-card:nth-child(7)  { animation-delay: 0.28s; }
+        .peptide-card:nth-child(8)  { animation-delay: 0.32s; }
+        .peptide-card:nth-child(9)  { animation-delay: 0.36s; }
+        .peptide-card:nth-child(10) { animation-delay: 0.40s; }
+        .peptide-card:nth-child(11) { animation-delay: 0.44s; }
+        .peptide-card:nth-child(12) { animation-delay: 0.48s; }
+        .peptide-card:nth-child(13) { animation-delay: 0.52s; }
+
+        /* ─── ABOUT ───────────────────────────────────── */
+        .about {
+            background: var(--forest);
+            padding: 7rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 55% 80% at 95% 50%, rgba(13,138,110,0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .about-grid-bg {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(13,138,110,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(13,138,110,0.05) 1px, transparent 1px);
+            background-size: 56px 56px;
+            pointer-events: none;
+        }
+
+        .about-inner {
+            position: relative;
+            max-width: 1440px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 7rem;
+            align-items: center;
+        }
+
+        .about-text .section-eyebrow { color: rgba(13,138,110,0.85); }
+
+        .about-text .section-title {
+            font-size: 3rem;
+            color: var(--cream);
+            margin-bottom: 1.75rem;
+            line-height: 1.1;
+        }
+
+        .about-text p {
+            font-size: 0.87rem;
+            line-height: 1.85;
+            color: rgba(251,251,239,0.5);
+            margin-bottom: 1rem;
+        }
+
+        .about-pillars { display: flex; flex-direction: column; gap: 1.1rem; }
+
+        .pillar {
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+            padding: 1.2rem 1.5rem;
+            border: 1px solid rgba(13,138,110,0.18);
+            border-radius: 6px;
+            background: rgba(13,138,110,0.05);
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .pillar:hover { background: rgba(13,138,110,0.1); border-color: rgba(13,138,110,0.35); }
+
+        .pillar-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 300;
+            color: var(--teal);
+            line-height: 1;
+            flex-shrink: 0;
+            width: 2.25rem;
+        }
+
+        .pillar-content h4 {
+            font-size: 0.77rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--cream);
+            margin-bottom: 0.4rem;
+        }
+
+        .pillar-content p {
+            font-size: 0.77rem;
+            line-height: 1.65;
+            color: rgba(251,251,239,0.44);
+            margin-bottom: 0;
+        }
+
+        /* ─── FOOTER ──────────────────────────────────── */
+        footer {
+            background: var(--cream);
+            border-top: 1px solid var(--sand);
+            padding: 2.5rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-left { display: flex; flex-direction: column; gap: 0.75rem; }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+            text-decoration: none;
+        }
+
+        .footer-brand-text {
+            font-weight: 700;
+            font-size: 0.88rem;
+            letter-spacing: 0.18em;
+            color: var(--teal);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-link {
+            font-size: 0.71rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover { color: var(--teal); }
+
+        .footer-copy {
+            font-size: 0.69rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+            max-width: 500px;
+            text-align: right;
+        }
+
+        /* ─── ANIMATIONS ──────────────────────────────── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ─── RESPONSIVE ──────────────────────────────── */
+        @media (max-width: 1024px) {
+            .article-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 900px) {
+            :root { --nav-h: 58px; }
+
+            nav, .compliance-strip + nav,
+            .tendencias, .compuestos, .about, footer {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+
+            nav { padding: 0 1.5rem; }
+
+            .hero { padding: 5rem 1.5rem 4rem; }
+            .hero-stats { display: none; }
+
+            .featured-card { grid-template-columns: 1fr; }
+            .featured-card-visual { min-height: 140px; }
+
+            .article-grid { grid-template-columns: 1fr; }
+
+            .compuestos-header { flex-direction: column; align-items: flex-start; }
+            .compuestos-header-right { flex-direction: column; align-items: flex-start; }
+
+            .peptide-grid { grid-template-columns: 1fr; }
+
+            .about-inner { grid-template-columns: 1fr; gap: 3.5rem; }
+            .about-text .section-title { font-size: 2.25rem; }
+
+            footer { flex-direction: column; align-items: flex-start; }
+            .footer-copy { text-align: left; }
+
+            .compliance-strip { padding: 0 1rem; }
+            .compliance-strip p { font-size: 0.62rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- COMPLIANCE STRIP -->
+    <div class="compliance-strip">
+        <p><strong>Solo para fines de investigación científica.</strong> No apto para consumo humano ni veterinario. — <a href="disclaimer.html">Aviso legal completo</a></p>
+    </div>
+
+    <!-- NAV -->
+    <nav>
+        <a class="nav-logo" href="index.html">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                <path d="M16 2C16 2 7 11 7 19C7 23.9706 11.0294 28 16 28C20.9706 28 25 23.9706 25 19C25 11 16 2 16 2Z" fill="#0D8A6E"/>
+                <path d="M16 9L11.5 16H20.5L16 9Z" fill="white" opacity="0.55"/>
+                <ellipse cx="16" cy="21" rx="3" ry="4" fill="white" opacity="0.22"/>
+            </svg>
+            <span class="nav-logo-text">BIOFILLERS</span>
+        </a>
+        <div class="nav-right">
+            <a class="nav-link" href="#tendencias">Aprende</a>
+            <a class="nav-link" href="#tendencias">Tendencias</a>
+            <a class="nav-link" href="#compuestos">Compuestos</a>
+            <a class="nav-link" href="#nosotros">Nosotros</a>
+            <span class="nav-badge">Solo Investigación</span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Biofillers · Ciencia Peptídica</p>
+            <h1 class="hero-title">
+                Todo lo que necesitas<br>
+                saber sobre <em>péptidos</em><br>
+                de investigación
+            </h1>
+            <p class="hero-subtitle">
+                Recursos científicos, artículos y referencia de compuestos para profesionales de la salud y el curioso informado. Sin hype, sin afirmaciones clínicas.
+            </p>
+            <div class="hero-actions">
+                <a href="#tendencias" class="btn-primary">
+                    Explorar temas
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path d="M2 7.5H13M13 7.5L7.5 2M13 7.5L7.5 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="#compuestos" class="btn-ghost-sm">Ver compuestos →</a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="hero-stat-num">6</div>
+                <div class="hero-stat-label">Artículos</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-num">13</div>
+                <div class="hero-stat-label">Compuestos</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENDENCIAS -->
+    <section class="tendencias" id="tendencias">
+        <div class="tendencias-header">
+            <div>
+                <p class="section-eyebrow">Artículos & Tendencias</p>
+                <h2 class="section-title">Temas de Investigación</h2>
+            </div>
+            <a href="#tendencias" class="tendencias-header-link">
+                Ver todos
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M2 7H12M12 7L7 2M12 7L7 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+
+        <!-- Featured Card: Tirzepatida -->
+        <a href="tirzepatida.html" class="featured-card">
+            <div class="featured-card-visual">
+                <div class="featured-card-visual-grid"></div>
+                <span class="featured-card-visual-icon">Tz</span>
+            </div>
+            <div class="featured-card-body">
+                <div class="featured-card-meta">
+                    <span class="article-tag tag-metabolico">Control de Peso</span>
+                    <span class="read-time">8 min lectura</span>
+                </div>
+                <h3 class="featured-card-title">¿Qué es la Tirzepatida y cómo funciona?</h3>
+                <p class="featured-card-desc">El doble agonista incretínico GLP-1/GIP es uno de los compuestos metabólicos más investigados del momento. Conoce su mecanismo de acción, diferencias con Semaglutide y las preguntas que los investigadores se hacen hoy.</p>
+                <span class="featured-card-cta">
+                    Leer artículo completo
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M2 7H12M12 7L7 2M12 7L7 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </div>
+        </a>
+
+        <!-- Article Grid -->
+        <div class="article-grid">
+
+            <a href="articulo-semaglutide-vs-tirzepatida.html" class="article-card">
+                <div class="article-card-meta">
+                    <span class="article-tag tag-metabolico">Metabólico</span>
+                    <span class="article-card-read-time">5 min</span>
+                </div>
+                <h3 class="article-card-title">¿En qué se diferencia Semaglutide de Tirzepatida?</h3>
+                <p class="article-card-desc">Comparativa mecanicista de dos GLP-1 agonistas ampliamente investigados: estructura molecular, receptor objetivo y perfil de estudios clínicos.</p>
+                <span class="article-card-link">
+                    Leer artículo
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M2 6H10M10 6L6 2M10 6L6 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </a>
+
+            <a href="articulo-retatrutide.html" class="article-card">
+                <div class="article-card-meta">
+                    <span class="article-tag tag-metabolico">Metabólico</span>
+                    <span class="article-card-read-time">6 min</span>
+                </div>
+                <h3 class="article-card-title">Retatrutide: el triple agonista que va más allá del GLP-1</h3>
+                <p class="article-card-desc">¿Qué ocurre cuando se activan simultáneamente los receptores GLP-1, GIP y glucagón? La ciencia detrás del triple agonismo metabólico.</p>
+                <span class="article-card-link">
+                    Leer artículo
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M2 6H10M10 6L6 2M10 6L6 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </a>
+
+            <a href="articulo-bpc157.html" class="article-card">
+                <div class="article-card-meta">
+                    <span class="article-tag tag-regeneracion">Regeneración</span>
+                    <span class="article-card-read-time">5 min</span>
+                </div>
+                <h3 class="article-card-title">¿Cómo se investiga BPC-157 en recuperación de lesiones?</h3>
+                <p class="article-card-desc">Desde la ruta del óxido nítrico hasta la angiogénesis: los mecanismos estudiados detrás del péptido de protección corporal.</p>
+                <span class="article-card-link">
+                    Leer artículo
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M2 6H10M10 6L6 2M10 6L6 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </a>
+
+            <a href="articulo-nad.html" class="article-card">
+                <div class="article-card-meta">
+                    <span class="article-tag tag-longevidad">Longevidad</span>
+                    <span class="article-card-read-time">6 min</span>
+                </div>
+                <h3 class="article-card-title">NAD⁺ y envejecimiento celular: qué dice la ciencia actual</h3>
+                <p class="article-card-desc">El rol del NAD⁺ en sirtuinas, reparación del ADN y biogénesis mitocondrial. Por qué los investigadores de longevidad lo estudian intensamente.</p>
+                <span class="article-card-link">
+                    Leer artículo
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M2 6H10M10 6L6 2M10 6L6 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </a>
+
+            <a href="articulo-peptidos-nootropicos.html" class="article-card">
+                <div class="article-card-meta">
+                    <span class="article-tag tag-cognitivo">Cognitivo</span>
+                    <span class="article-card-read-time">5 min</span>
+                </div>
+                <h3 class="article-card-title">Semax y Selank: investigación en péptidos nootrópicos</h3>
+                <p class="article-card-desc">Dos péptidos sintéticos derivados de ACTH y tuftsin que se estudian por su actividad sobre el BDNF, GABA-A y la respuesta al estrés.</p>
+                <span class="article-card-link">
+                    Leer artículo
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M2 6H10M10 6L6 2M10 6L6 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- COMPUESTOS DE INVESTIGACIÓN -->
+    <section class="compuestos" id="compuestos">
+        <div class="compuestos-header">
+            <div>
+                <p class="section-eyebrow">Referencia Científica</p>
+                <h2 class="section-title">Compuestos de Investigación</h2>
+            </div>
+            <div class="compuestos-header-right">
+                <span class="section-count">13</span>
+                <a href="https://wa.me/525527962437" target="_blank" rel="noopener noreferrer" class="wa-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Consultas Científicas
+                </a>
+            </div>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterCards('all', this)">Todos</button>
+            <button class="filter-btn" onclick="filterCards('stack', this)">Stack Exclusivo</button>
+            <button class="filter-btn" onclick="filterCards('regeneracion', this)">Regeneración</button>
+            <button class="filter-btn" onclick="filterCards('metabolico', this)">Control de Peso</button>
+            <button class="filter-btn" onclick="filterCards('longevidad', this)">Longevidad</button>
+            <button class="filter-btn" onclick="filterCards('cognitivo', this)">Cognitivo</button>
+            <button class="filter-btn" onclick="filterCards('hormonal', this)">Hormonal</button>
+        </div>
+
+        <div class="peptide-grid" id="peptideGrid">
+
+            <!-- 1. KLOW -->
+            <div class="peptide-card flagship" data-category="stack">
+                <div class="card-header">
+                    <span class="card-category cat-stack">Stack Exclusivo</span>
+                    <span class="card-dosage">80mg</span>
+                </div>
+                <h3 class="card-name">KLOW</h3>
+                <p class="card-alias">Piel · Intestino · Recuperación</p>
+                <div class="card-combo">
+                    <span class="combo-pill">KPV 10mg</span>
+                    <span class="combo-pill">BPC 10mg</span>
+                    <span class="combo-pill">TB-500 10mg</span>
+                    <span class="combo-pill">GHK-Cu 50mg</span>
+                </div>
+                <div class="card-format">Liofilizado · Vial único</div>
+                <div class="card-divider"></div>
+                <p class="card-description">
+                    Formulación combinada que se investiga por los mecanismos sinérgicos de cuatro péptidos. GHK-Cu se estudia por su rol en la modulación de metaloproteasas y síntesis de colágeno. KPV se investiga por su actividad antiinflamatoria vía inhibición de NF-κB en mucosa intestinal. BPC-157 y TB-500 se estudian por sus propiedades en regeneración de tejido musculoesquelético y protección de mucosa gástrica.
+                </p>
+                <div class="card-tags">
+                    <span class="card-tag">Colágeno / MMP</span>
+                    <span class="card-tag">NF-κB</span>
+                    <span class="card-tag">Mucosa Intestinal</span>
+                    <span class="card-tag">Regeneración</span>
+                </div>
+            </div>
+
+            <!-- 2. BPC-157 + TB-500 -->
+            <div class="peptide-card" data-category="regeneracion">
+                <div class="card-header">
+                    <span class="card-category cat-regeneracion">Regeneración Tisular</span>
+                    <span class="card-dosage">20mg</span>
+                </div>
+                <div class="card-combo">
+                    <span class="combo-pill">BPC-157</span>
+                    <span class="combo-pill">+</span>
+                    <span class="combo-pill">TB-500</span>
+                </div>
+                <h3 class="card-name">BPC-157 + TB-500</h3>
+                <p class="card-alias">Reparación · Recuperación</p>
+                <div class="card-format">Combo vial · Liofilizado</div>
+                <div class="card-divider"></div>
+                <p class="card-description">
+                    Combinación estudiada por sus mecanismos complementarios en reparación tisular. BPC-157 se investiga por su actividad en la ruta del óxido nítrico, modulación angiogénica y citoprotección gástrica. TB-500 (fragmento de timosina β4) se estudia por su rol en la migración celular, lamelipodios y respuesta antiinflamatoria local.
+                </p>
+                <div class="card-tags">
+                    <span class="card-tag">Óxido Nítrico</span>
+                    <span class="card-tag">Angiogénesis</span>
+                    <span class="card-tag">Timosina β4</span>
+                </div>
+            </div>
+
+            <!-- 3. IGF-1 LR3 -->
+            <div class="peptide-card" data-category="regeneracion">
+                <div class="card-header">
+                    <span class="card-category cat-regeneracion">Regeneración Tisular</span>
+                    <span class="card-dosage">Grado Investigación</span>
+                </div>
+                <h3 class="card-name">IGF-1 LR3</h3>
+                <p class="card-alias">Factor de Crecimiento Insulínico — Long Arg3</p>
+                <div class="card-format">Liofilizado</div>
+                <div class="card-divider"></div>
+                <p class="card-description">
+                    Análogo de larga duración del IGF-1 investigado por su actividad en las vías de señalización PI3K/Akt/mTOR y MAPK. La sustitución Arg3 reduce la afinidad por proteínas de unión (IGFBPs), prolongando la biodisponibilidad. Se estudia por su rol en diferenciación celular, señalización anabólica y regeneración de tejido musculoesquelético y óseo.
+                </p>
+                <div class="card-tags">
+                    <span class="card-tag">PI3K/Akt/mTOR</span>
+                    <span class="card-tag">MAPK</span>
+                    <span class="card-tag">Diferenciación Celular</span>
+                </div>
+            </div>
+
+            <!-- 4. Retatrutide 20mg -->
+            <div class="peptide-card" data-category="metabolico">
+                <div class="card-header">
+                    <span class="card-category cat-metabolico">Control de Peso</span>
+                    <span class="card-dosage">20mg</span>
+                </div>
+                <h3 class="card-name">Retatrutide</h3>
+                <p class="card-alias">Triple Agonista GLP-1 / GIP / Glucagón</p>
+                <div class="card-format">20mg · Liofilizado</div>
+                <div class="card-divider"></div>
+                <p class="card-description">
+                    Triple agonista de los receptores GLP-1, GIP y glucagón. Se investiga como enfoque farmacológico de amplio espectro para la regulación metabólica: los estudios de fase III exploran su efecto en la modulación del balance energético, glucemia en ayuno y perfil lipídico mediante activación simultánea de tres ejes hormonales.
+                </p>
+                <div class="card-tags">
+                    <span class="card-tag">GLP-1R</span>
+                    <span class="card-tag">GIPR</span>
+                    <span class="card-tag">Glucagón-R</span>
+                    <span class="card-tag">Triple Agonismo</span>
+                </div>
+            </div>
+
+            <!-- 5. Retatrutide 10mg -->
+            <div class="peptide-card" data-category="metabolico">
+                <div class="card-header">
+                    <span class="card-category cat-metabolico">Control de Peso</span>
+                    <span class="card-dosage">10mg</span>
+                </div>
+                <h3 class="card-name">Retatrutide</h3>
+                <p class="card-alias">Triple Agonista — Dosis de Titulación</p>
+                <div class="card-format">10mg · Liofilizado</div>
+                <div class="card-divider"></div>
+                <p class="card-description">
+                    Variante de menor concentración del triple agonista GLP-1/GIP/glucagón. Se emplea en investigación para la caracterización de curvas dosis-respuesta, evaluación de parámetros de tolerabilidad y titulación escalonada en estudios de composición corporal y regulación glucémica.
+                </p>
+                <div class="card-tags">
+                    <span class="card-tag">GLP-1R</span>
+                    <span class="card-tag">Triple Agonismo</span>
+                    <span class="card-tag">Dosis-Respuesta</span>
+                </div>
+            </div>
+
+            <!-- 6. Tirzepatide -->
+            <div class="peptide-card" data-category="metabolico">
+                <div class="card-header">
+                    <span class="card-category cat-metabolico">Control de Peso</span>
+                    <span class="card-dosage">60mg</span>
+                </div>
+                <h3 class="card-name">Tirzepatida</h3>
+                <p class="card-alias">Doble Agonista Incretínico GLP-1 / GIP</p>
+                <div class="card-format">60mg · Liofilizado</div>
+                <div class="card-divider"></div>
+                <p class="card-description">
+                    Doble agonista incretínico investigado por su actividad dual sobre receptores GLP-1 y GIP. Se estudia por su rol en la modulación del vaciamiento gástrico, secreción insulínica dependiente de glucosa y señalización hipotalámica del apetito. Los ensayos clínicos exploran su perfil en resistencia a la insulina y dislipidemia.
+                </p>
+                <div class="card-tags">
+                    <span class="card-tag">GLP-1R</span>
+                    <span class="card-tag">GIPR</span>
+                    <span class="card-tag">Incretina</span>
+                    <span class="card-tag">Hipotálamo</span>
+                </div>
+            </div>
+
+            <!-- 7. Semaglutide -->
+            <div class="peptide-card" data-category="metabolico">
+                <div class="card-header">
+                    <span class="card-category cat-metabolico">Control de Peso</span>
+                    <span class="card-dosage">30mg</span>
+                </div>
+                <h3 class="card-name">Semaglutide</h3>
+                <p class="card-alias">Agonista del Receptor GLP-1 — Larga Duración</p>
+                <div class="card-format">30mg · Liofilizado</div>
+                <div class="card-divider"></div>
+                <p class="card-description">
+                    Agonista del receptor GLP-1 con modificación de ácido graso C18 para unión a albúmina y vida media aproximada de 7 días. Se investiga por su actividad sobre el núcleo arcuato hipotalámico en la regulación neuroendocrina del apetito, la modulación del vaciamiento gástrico y la función de células β pancreáticas.
+                </p>
+                <div class="card-tags">
+                    <span class="card-tag">GLP-1R</span>
+                    <span class="card-tag">Núcleo Arcuato</span>
+                    <span class="card-tag">Células β</span>
+                    <span class="card-tag">Larga Acción</span>
+                </div>
+            </div>
+
+            <!-- 8. MOTS-c -->
+            <div class="peptide-card" data-category="longevidad">
+                <div class="card-header">
+                    <span class="card-category cat-longevidad">Longevidad & Energía</span>
+                    <span class="card-dosage">40mg</span>
+                </div>
+                <h3 class="card-name">MOTS-c</h3>
+                <p class="card-alias">Péptido Mitocondrial — ORF del gen ARNr 12S</p>
+                <div class="card-format">40mg · Liofilizado</div>
+                <div class="card-divider"></div>
+                <p class="card-description">
+                    Péptido derivado de mitocondrias que se investiga como mitokina reguladora de la expresión génica nuclear bajo estrés metabólico. Los estudios exploran su rol en la activación de AMPK, sensibilidad a la insulina, resistencia al estrés oxidativo y mecanismos asociados al declive metabólico relacionado con el envejecimiento.
+                </p>
+                <div class="card-tags">
+                    <span class="card-tag">AMPK</span>
+                    <span class="card-tag">Mitokina</span>
+                    <span class="card-tag">Estrés Oxidativo</span>
+                    <span class="card-tag">Envejecimiento</span>
+                </div>
+            </div>
+
+            <!-- 9. NAD+ -->
+            <div class="peptide-card" data-category="longevidad">
+                <div class="card-header">
+                    <span class="card-category cat-longevidad">Longevidad & Energía</span>
+                    <span class="card-dosage">1,000mg</span>
+                </div>
+                <h3 class="card-name">NAD⁺</h3>
+                <p class="card-alias">Nicotinamida Adenina Dinucleótido</p>
+                <div class="card-format">1,000mg · Liofilizado</div>
+                <div class="card-divider"></div>
+                <p class="card-description">
+                    Coenzima central en el metabolismo redox celular y sustrato obligado de sirtuinas (SIRT1–7) y PARPs involucrados en reparación del ADN y remodelación de cromatina. Se investiga en el contexto del declive de los niveles de NAD⁺ asociado al envejecimiento y su relación con la biogénesis mitocondrial y las vías de longevidad.
+                </p>
+                <div class="card-tags">
+                    <span class="card-tag">Sirtuinas SIRT1-7</span>
+                    <span class="card-tag">PARP</span>
+                    <span class="card-tag">Reparación ADN</span>
+                    <span class="card-tag">Biogénesis Mito.</span>
+                </div>
+            </div>
+
+            <!-- 10. Semax -->
+            <div class="peptide-card" data-category="cognitivo">
+                <div class="card-header">
+                    <span class="card-category cat-cognitivo">Cognitivo & Mental</span>
+                    <span class="card-dosage">5mg</span>
+                </div>
+                <h3 class="card-name">Semax</h3>
+                <p class="card-alias">Heptapéptido Sintético — Análogo ACTH(4-7)PGP</p>
+                <div class="card-format">5mg · Liofilizado</div>
+                <div class="card-divider"></div>
+                <p class="card-description">
+                    Heptapéptido sintético derivado del fragmento ACTH 4–10 con extensión PGP para estabilidad. Se investiga por su capacidad de upregulación del BDNF, neuroprotección ante modelos de isquemia y modulación de la densidad de receptores dopaminérgicos y serotoninérgicos en el sistema nervioso central.
+                </p>
+                <div class="card-tags">
+                    <span class="card-tag">BDNF</span>
+                    <span class="card-tag">Neuroprotección</span>
+                    <span class="card-tag">Dopamina / 5-HT</span>
+                </div>
+            </div>
+
+            <!-- 11. Selank -->
+            <div class="peptide-card" data-category="cognitivo">
+                <div class="card-header">
+                    <span class="card-category cat-cognitivo">Cognitivo & Mental</span>
+                    <span class="card-dosage">10mg</span>
+                </div>
+                <h3 class="card-name">Selank</h3>
+                <p class="card-alias">Análogo de Tuftsin (TP-7)</p>
+                <div class="card-format">10mg · Liofilizado</div>
+                <div class="card-divider"></div>
+                <p class="card-description">
+                    Heptapéptido sintético basado en tuftsin con extensión Pro-Gly-Pro para estabilidad metabólica. Se investiga por su actividad moduladora sobre el receptor GABA-A y la estabilidad de encefalinas endógenas. Los modelos preclínicos exploran propiedades ansiolíticas sin sedación y efectos sobre la consolidación de memoria.
+                </p>
+                <div class="card-tags">
+                    <span class="card-tag">GABA-A</span>
+                    <span class="card-tag">Encefalinas</span>
+                    <span class="card-tag">Ansiolítico</span>
+                    <span class="card-tag">Sin Sedación</span>
+                </div>
+            </div>
+
+            <!-- 12. CJC-1295 + Ipamorelin -->
+            <div class="peptide-card" data-category="hormonal">
+                <div class="card-header">
+                    <span class="card-category cat-hormonal">Hormonal & Composición</span>
+                    <span class="card-dosage">5mg + 5mg</span>
+                </div>
+                <div class="card-combo">
+                    <span class="combo-pill">CJC-1295 sin DAC</span>
+                    <span class="combo-pill">+</span>
+                    <span class="combo-pill">Ipamorelin</span>
+                </div>
+                <h3 class="card-name">CJC-1295 + Ipamorelin</h3>
+                <p class="card-alias">Hormona de Crecimiento · Balance Hormonal</p>
+                <div class="card-format">Combo 5+5mg · Liofilizado</div>
+                <div class="card-divider"></div>
+                <p class="card-description">
+                    Combinación de un análogo GHRH (CJC-1295 sin DAC, vida media ~30 min) con un secretagogo selectivo de GH (Ipamorelin). Se investiga por su capacidad de amplificar la amplitud del pulso de GH sin elevar significativamente cortisol, prolactina ni ACTH, replicando un perfil de secreción fisiológica pulsátil.
+                </p>
+                <div class="card-tags">
+                    <span class="card-tag">GHRH Análogo</span>
+                    <span class="card-tag">Pulso GH</span>
+                    <span class="card-tag">Selectivo</span>
+                    <span class="card-tag">Fisiológico</span>
+                </div>
+            </div>
+
+            <!-- 13. Kisspeptin -->
+            <div class="peptide-card" data-category="hormonal">
+                <div class="card-header">
+                    <span class="card-category cat-hormonal">Hormonal & Composición</span>
+                    <span class="card-dosage">5mg</span>
+                </div>
+                <h3 class="card-name">Kisspeptin-10</h3>
+                <p class="card-alias">Neuropéptido Kiss1 / GPR54</p>
+                <div class="card-format">5mg · Liofilizado</div>
+                <div class="card-divider"></div>
+                <p class="card-description">
+                    Neuropéptido regulador maestro del eje hipotálamo-hipófisis-gónadas (HHG). Se investiga por su rol en la integración de señales metabólicas y hormonales para el control de la frecuencia de pulsos de GnRH. Los estudios exploran su actividad en neuroendocrinología reproductiva y regulación del eje hormonal gonadal.
+                </p>
+                <div class="card-tags">
+                    <span class="card-tag">Eje HHG</span>
+                    <span class="card-tag">GnRH</span>
+                    <span class="card-tag">GPR54</span>
+                    <span class="card-tag">Neuroendocrino</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="about" id="nosotros">
+        <div class="about-grid-bg"></div>
+        <div class="about-inner">
+            <div class="about-text">
+                <p class="section-eyebrow">Nuestro Enfoque</p>
+                <h2 class="section-title">Ciencia Peptídica<br><em style="font-style:italic; color:rgba(13,138,110,0.8)">de Primer Nivel</em></h2>
+                <p>Biofillers se dedica al avance de la ciencia peptídica a través de metodología de investigación rigurosa. Nuestro contenido representa el estado del arte en biología regenerativa, medicina metabólica y neurociencias cognitivas.</p>
+                <p>Toda la información publicada se basa en mecanismos de acción estudiados, sin afirmaciones clínicas ni promesas de resultados. El objetivo es educar al investigador y al profesional de la salud.</p>
+            </div>
+            <div class="about-pillars">
+                <div class="pillar">
+                    <span class="pillar-num">01</span>
+                    <div class="pillar-content">
+                        <h4>Lenguaje Mecanicista</h4>
+                        <p>Describimos mecanismos de acción, no resultados. "Se investiga para..." en lugar de "mejora" o "cura".</p>
+                    </div>
+                </div>
+                <div class="pillar">
+                    <span class="pillar-num">02</span>
+                    <div class="pillar-content">
+                        <h4>Rigor Científico</h4>
+                        <p>Cada artículo y descripción de compuesto está fundamentado en literatura revisada por pares y estudios preclínicos o clínicos documentados.</p>
+                    </div>
+                </div>
+                <div class="pillar">
+                    <span class="pillar-num">03</span>
+                    <div class="pillar-content">
+                        <h4>Investigación Ética</h4>
+                        <p>Todo el contenido se presenta exclusivamente para investigación científica legítima y propósitos educativos, sin recomendaciones de uso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-left">
+            <a class="footer-brand" href="index.html">
+                <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 2C16 2 7 11 7 19C7 23.9706 11.0294 28 16 28C20.9706 28 25 23.9706 25 19C25 11 16 2 16 2Z" fill="#0D8A6E"/>
+                    <path d="M16 9L11.5 16H20.5L16 9Z" fill="white" opacity="0.55"/>
+                    <ellipse cx="16" cy="21" rx="3" ry="4" fill="white" opacity="0.2"/>
+                </svg>
+                <span class="footer-brand-text">BIOFILLERS</span>
+            </a>
+            <div class="footer-links">
+                <a class="footer-link" href="disclaimer.html">Aviso Legal</a>
+                <a class="footer-link" href="#tendencias">Artículos</a>
+                <a class="footer-link" href="#compuestos">Compuestos</a>
+            </div>
+        </div>
+        <p class="footer-copy">
+            Solo para fines de investigación y educación. Ninguno de los compuestos listados está aprobado para uso humano o veterinario. No se hacen ni implican afirmaciones terapéuticas. © 2026 Biofillers Research.
+        </p>
+    </footer>
+
+    <script>
+        function filterCards(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('.peptide-card').forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = '';
+                    void card.offsetWidth;
+                    card.style.animation = 'none';
+                    void card.offsetWidth;
+                    card.style.animation = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

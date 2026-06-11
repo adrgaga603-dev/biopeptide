@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué es la Tirzepatida y cómo funciona? Guía de investigación 2026 — BIOFILLERS</title>
+    <meta name="description" content="Guía científica completa sobre tirzepatida: mecanismo de acción como doble agonista GLP-1/GIP, diferencias con semaglutide y preguntas frecuentes de investigación.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --teal:      #0D8A6E;
+            --teal-dark: #0A6B55;
+            --teal-glow: rgba(13,138,110,0.12);
+            --forest:    #2B3210;
+            --cream:     #FBFBEF;
+            --sand:      #E5E2D9;
+            --text:      #1C2A1A;
+            --text-soft: #4D5E48;
+            --text-muted:#8E9E88;
+            --strip-h:   36px;
+            --nav-h:     64px;
+        }
+
+        html { scroll-behavior: smooth; scroll-padding-top: calc(var(--strip-h) + var(--nav-h) + 1rem); }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            overflow-x: hidden;
+            padding-top: calc(var(--strip-h) + var(--nav-h));
+        }
+
+        /* ─── COMPLIANCE STRIP ────────────────────────── */
+        .compliance-strip {
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: var(--strip-h);
+            z-index: 200;
+            background: var(--forest);
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        .compliance-strip p {
+            font-size: 0.68rem; font-weight: 600; letter-spacing: 0.05em;
+            color: rgba(255,255,255,0.72); text-align: center;
+        }
+
+        .compliance-strip strong { color: white; }
+
+        .compliance-strip a {
+            color: rgba(13,138,110,0.9); font-weight: 700;
+            text-decoration: none; transition: color 0.2s;
+        }
+
+        .compliance-strip a:hover { color: var(--teal); }
+
+        /* ─── NAV ─────────────────────────────────────── */
+        nav {
+            position: fixed; top: var(--strip-h); left: 0;
+            width: 100%; height: var(--nav-h);
+            z-index: 100; padding: 0 4rem;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(251,251,239,0.95);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(13,138,110,0.1);
+        }
+
+        .nav-logo { display: flex; align-items: center; gap: 0.55rem; text-decoration: none; }
+        .nav-logo-text { font-weight: 700; font-size: 1rem; letter-spacing: 0.18em; color: var(--teal); }
+
+        .nav-right { display: flex; align-items: center; gap: 1.75rem; }
+
+        .nav-link {
+            font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
+            color: var(--text-soft); text-decoration: none; transition: color 0.2s;
+        }
+
+        .nav-link:hover { color: var(--teal); }
+
+        .nav-badge {
+            font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em;
+            color: var(--teal); border: 1.5px solid var(--teal);
+            padding: 0.26rem 0.75rem; border-radius: 20px;
+        }
+
+        /* ─── ARTICLE LAYOUT ──────────────────────────── */
+        .article-wrap {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 4rem 2rem 6rem;
+        }
+
+        /* BREADCRUMB */
+        .breadcrumb {
+            display: flex; align-items: center; gap: 0.5rem;
+            font-size: 0.7rem; font-weight: 600;
+            letter-spacing: 0.06em; color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .breadcrumb a { color: var(--teal); text-decoration: none; transition: color 0.2s; }
+        .breadcrumb a:hover { color: var(--teal-dark); }
+        .breadcrumb span { opacity: 0.4; }
+
+        /* ARTICLE META */
+        .article-meta {
+            display: flex; align-items: center; gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-tag {
+            font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em;
+            text-transform: uppercase; padding: 0.26rem 0.65rem; border-radius: 3px;
+        }
+
+        .tag-metabolico { background: rgba(61,90,10,0.12); color: #3D5A0A; }
+
+        .article-read-time {
+            font-size: 0.7rem; font-weight: 500; color: var(--text-muted);
+        }
+
+        /* H1 */
+        .article-h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4.5vw, 3rem);
+            font-weight: 400;
+            line-height: 1.12;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-lead {
+            font-size: 1rem; font-weight: 400; line-height: 1.75;
+            color: var(--text-soft);
+            border-left: 3px solid var(--teal);
+            padding-left: 1.25rem;
+            margin-bottom: 3rem;
+        }
+
+        /* ARTICLE BODY */
+        .article-body h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.65rem; font-weight: 400;
+            color: var(--text);
+            margin: 2.5rem 0 1rem;
+            padding-top: 0.5rem;
+        }
+
+        .article-body h3 {
+            font-size: 0.9rem; font-weight: 700;
+            letter-spacing: 0.06em; text-transform: uppercase;
+            color: var(--teal); margin: 1.75rem 0 0.75rem;
+        }
+
+        .article-body p {
+            font-size: 0.9rem; line-height: 1.85;
+            color: var(--text-soft); margin-bottom: 1.1rem;
+        }
+
+        .article-body strong { color: var(--text); font-weight: 700; }
+
+        .article-body ul, .article-body ol {
+            padding-left: 1.5rem; margin-bottom: 1.1rem;
+        }
+
+        .article-body li {
+            font-size: 0.88rem; line-height: 1.75;
+            color: var(--text-soft); margin-bottom: 0.5rem;
+        }
+
+        /* INFO BOX */
+        .info-box {
+            background: white; border: 1px solid var(--sand);
+            border-left: 3px solid var(--teal);
+            border-radius: 6px; padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+
+        .info-box-label {
+            font-size: 0.62rem; font-weight: 700;
+            letter-spacing: 0.15em; text-transform: uppercase;
+            color: var(--teal); margin-bottom: 0.6rem;
+        }
+
+        .info-box p {
+            font-size: 0.84rem; line-height: 1.7;
+            color: var(--text-soft); margin-bottom: 0;
+        }
+
+        /* COMPARISON TABLE */
+        .compare-table {
+            width: 100%; border-collapse: collapse;
+            margin: 1.75rem 0; font-size: 0.84rem;
+        }
+
+        .compare-table th {
+            font-size: 0.65rem; font-weight: 700;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--teal); text-align: left;
+            padding: 0.75rem 1rem;
+            border-bottom: 2px solid var(--teal);
+            background: var(--cream);
+        }
+
+        .compare-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--sand);
+            color: var(--text-soft); line-height: 1.5;
+        }
+
+        .compare-table tr:hover td { background: rgba(13,138,110,0.03); }
+
+        /* FAQ */
+        .faq-list { margin: 1.5rem 0; }
+
+        .faq-item {
+            border: 1px solid var(--sand);
+            border-radius: 6px;
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+            background: white;
+        }
+
+        .faq-q {
+            width: 100%; text-align: left; background: none; border: none;
+            padding: 1.1rem 1.25rem;
+            display: flex; justify-content: space-between; align-items: center;
+            cursor: pointer; font-family: 'Quicksand', sans-serif;
+            font-size: 0.86rem; font-weight: 700;
+            color: var(--text); gap: 1rem;
+            transition: color 0.2s;
+        }
+
+        .faq-q:hover { color: var(--teal); }
+
+        .faq-q svg { flex-shrink: 0; transition: transform 0.25s; }
+        .faq-item.open .faq-q svg { transform: rotate(180deg); }
+
+        .faq-a {
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.open .faq-a { max-height: 400px; }
+
+        .faq-a p {
+            font-size: 0.84rem; line-height: 1.75;
+            color: var(--text-soft);
+            padding: 0 1.25rem 1.25rem;
+        }
+
+        /* ARTICLE DIVIDER */
+        .article-divider {
+            height: 1px; background: var(--sand);
+            margin: 3rem 0;
+        }
+
+        /* REFERENCES */
+        .references { margin-top: 1rem; }
+
+        .references li {
+            font-size: 0.78rem; color: var(--text-muted);
+            line-height: 1.6; margin-bottom: 0.4rem;
+        }
+
+        /* RESEARCH CTA */
+        .research-cta {
+            background: var(--forest);
+            border-radius: 8px;
+            padding: 2rem 2.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .research-cta-text h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem; font-weight: 400;
+            color: var(--cream); margin-bottom: 0.4rem;
+        }
+
+        .research-cta-text p {
+            font-size: 0.78rem; color: rgba(251,251,239,0.45);
+            line-height: 1.5; margin-bottom: 0;
+        }
+
+        .wa-btn {
+            display: inline-flex; align-items: center; gap: 0.55rem;
+            background: #25D366; color: white; text-decoration: none;
+            padding: 0.7rem 1.35rem; border-radius: 4px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700; font-size: 0.76rem;
+            letter-spacing: 0.04em; white-space: nowrap;
+            transition: background 0.2s, transform 0.2s;
+            flex-shrink: 0;
+        }
+
+        .wa-btn:hover { background: #1faf58; transform: translateY(-1px); }
+
+        /* RELATED ARTICLES */
+        .related { margin-top: 4rem; }
+
+        .related h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem; font-weight: 300;
+            color: var(--text); margin-bottom: 1.25rem;
+        }
+
+        .related-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .related-card {
+            background: white; border: 1px solid var(--sand);
+            border-radius: 6px; padding: 1.25rem;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(43,50,16,0.07);
+            border-color: rgba(13,138,110,0.2);
+        }
+
+        .related-card-tag {
+            font-size: 0.58rem; font-weight: 700;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            padding: 0.22rem 0.55rem; border-radius: 3px;
+            display: inline-block; margin-bottom: 0.6rem;
+        }
+
+        .related-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05rem; font-weight: 400;
+            color: var(--text); line-height: 1.25;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--cream); border-top: 1px solid var(--sand);
+            padding: 2rem 4rem;
+            display: flex; justify-content: space-between;
+            align-items: center; gap: 2rem; flex-wrap: wrap;
+        }
+
+        .footer-brand { display: flex; align-items: center; gap: 0.55rem; text-decoration: none; }
+        .footer-brand-text { font-weight: 700; font-size: 0.88rem; letter-spacing: 0.18em; color: var(--teal); }
+
+        .footer-links { display: flex; gap: 1.5rem; }
+
+        .footer-link {
+            font-size: 0.71rem; font-weight: 600;
+            letter-spacing: 0.06em; color: var(--text-muted);
+            text-decoration: none; transition: color 0.2s;
+        }
+
+        .footer-link:hover { color: var(--teal); }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav { padding: 0 1.5rem; }
+            .article-wrap { padding: 3rem 1.25rem 5rem; }
+            .research-cta { flex-direction: column; }
+            .related-grid { grid-template-columns: 1fr; }
+            footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+            .compare-table { font-size: 0.78rem; }
+            .compare-table th, .compare-table td { padding: 0.6rem 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- COMPLIANCE STRIP -->
+    <div class="compliance-strip">
+        <p><strong>Solo para fines de investigación científica.</strong> No apto para consumo humano ni veterinario. — <a href="disclaimer.html">Aviso legal</a></p>
+    </div>
+
+    <!-- NAV -->
+    <nav>
+        <a class="nav-logo" href="index.html">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                <path d="M16 2C16 2 7 11 7 19C7 23.9706 11.0294 28 16 28C20.9706 28 25 23.9706 25 19C25 11 16 2 16 2Z" fill="#0D8A6E"/>
+                <path d="M16 9L11.5 16H20.5L16 9Z" fill="white" opacity="0.55"/>
+                <ellipse cx="16" cy="21" rx="3" ry="4" fill="white" opacity="0.22"/>
+            </svg>
+            <span class="nav-logo-text">BIOFILLERS</span>
+        </a>
+        <div class="nav-right">
+            <a class="nav-link" href="index.html#tendencias">Aprende</a>
+            <a class="nav-link" href="index.html#tendencias">Tendencias</a>
+            <a class="nav-link" href="index.html#compuestos">Compuestos</a>
+            <a class="nav-link" href="index.html#nosotros">Nosotros</a>
+            <span class="nav-badge">Solo Investigación</span>
+        </div>
+    </nav>
+
+    <!-- ARTICLE -->
+    <main class="article-wrap">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Inicio</a>
+            <span>›</span>
+            <a href="index.html#tendencias">Tendencias</a>
+            <span>›</span>
+            <span style="color:var(--text-soft)">Tirzepatida</span>
+        </nav>
+
+        <div class="article-meta">
+            <span class="article-tag tag-metabolico">Control de Peso</span>
+            <span class="article-read-time">8 min lectura · Investigación 2026</span>
+        </div>
+
+        <h1 class="article-h1">¿Qué es la Tirzepatida y cómo funciona? Guía de investigación 2026</h1>
+
+        <p class="article-lead">
+            La tirzepatida representa una nueva clase de molécula investigada por su actividad simultánea sobre dos receptores hormonales clave del metabolismo: GLP-1 y GIP. Esta guía explora su mecanismo de acción, su perfil en estudios comparativos frente a semaglutide, y las preguntas que los investigadores se hacen hoy.
+        </p>
+
+        <div class="article-body">
+
+            <h2>¿Qué es la tirzepatida?</h2>
+            <p>
+                La tirzepatida es un péptido sintético de 39 aminoácidos clasificado como <strong>doble agonista incretínico</strong>. Fue diseñada para activar simultáneamente los receptores del péptido similar al glucagón tipo 1 (GLP-1R) y del péptido insulinotrópico dependiente de glucosa (GIPR), dos receptores acoplados a proteínas G que juegan roles centrales en la fisiología del metabolismo energético.
+            </p>
+            <p>
+                A diferencia de los agonistas de GLP-1 de generación anterior (como semaglutide o liraglutide), la tirzepatida incorpora un esqueleto basado en la secuencia del GIP con modificaciones que confieren afinidad adicional por el GLP-1R. Esta arquitectura molecular dual es lo que la distingue farmacológicamente.
+            </p>
+
+            <div class="info-box">
+                <p class="info-box-label">Nota de investigación</p>
+                <p>La tirzepatida se clasifica como un <em>twincretin</em> — término acuñado para moléculas que integran dos señales incretínicas en un solo péptido. Los estudios exploran si la activación dual produce efectos aditivos, sinérgicos o distintos a la suma de agonismos individuales.</p>
+            </div>
+
+            <h2>Mecanismo de acción: doble agonista GLP-1 / GIP</h2>
+            <p>
+                Para entender la tirzepatida es necesario comprender los dos sistemas que activa:
+            </p>
+
+            <h3>Sistema GLP-1 (péptido similar al glucagón tipo 1)</h3>
+            <p>
+                El GLP-1 es secretado por las células L del intestino delgado en respuesta a la ingesta. Su unión al GLP-1R en células β pancreáticas estimula la secreción de insulina de manera <strong>dependiente de glucosa</strong> (no activa insulina cuando la glucosa está baja, lo que reduce el riesgo de hipoglucemia). Adicionalmente, el GLP-1R se expresa en el hipotálamo — específicamente en el núcleo arcuato y el núcleo del tracto solitario — donde modula la señalización de saciedad y el vaciamiento gástrico.
+            </p>
+
+            <h3>Sistema GIP (péptido insulinotrópico dependiente de glucosa)</h3>
+            <p>
+                El GIP es secretado por las células K del intestino proximal. Históricamente se le estudió principalmente por su efecto insulinotrópico en células β. Sin embargo, investigaciones recientes identifican al GIPR también en tejido adiposo, sistema nervioso central y músculo esquelético. Se investiga si la co-activación del GIPR modula la eficiencia del almacenamiento y movilización de energía, y si atenúa algunos efectos secundarios gastrointestinales asociados al agonismo GLP-1 puro.
+            </p>
+
+            <h3>Activación combinada</h3>
+            <p>
+                En modelos de estudio, la activación simultánea de GLP-1R y GIPR se investiga por producir una señalización metabólica más amplia que el agonismo individual. Los mecanismos en estudio incluyen: potenciación de la secreción de insulina, modulación del glucagón, regulación central del balance energético y posibles efectos en la distribución de la grasa visceral.
+            </p>
+
+            <div class="info-box">
+                <p class="info-box-label">Mecanismo molecular</p>
+                <p>La tirzepatida presenta mayor afinidad nativa por el GIPR (~5 nM) que por el GLP-1R (~1 nM en términos de potencia funcional en cAMP). Esta asimetría es intencional: el backbone de GIP se modificó con ácido aminoisobutírico (Aib) en posición 2 para resistir la degradación por DPP-4, y se añadió una cadena lipídica C18 para unión a albúmina y vida media extendida (~5 días en humanos).</p>
+            </div>
+
+            <h2>Diferencias clave con semaglutide</h2>
+            <p>
+                Semaglutide y tirzepatida comparten el objetivo de activar el GLP-1R, pero difieren en estructura, selectividad y perfil de investigación. La tabla siguiente resume las diferencias mecanicistas estudiadas:
+            </p>
+
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>Parámetro</th>
+                        <th>Semaglutide</th>
+                        <th>Tirzepatida</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Clase</strong></td>
+                        <td>Agonista GLP-1R selectivo</td>
+                        <td>Agonista dual GLP-1R + GIPR</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Estructura base</strong></td>
+                        <td>Análogo de GLP-1 (26/34)</td>
+                        <td>Péptido basado en secuencia GIP modificada</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vida media</strong></td>
+                        <td>~7 días (unión albumina C18)</td>
+                        <td>~5 días (unión albumina C18 diacídica)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Frecuencia en estudios</strong></td>
+                        <td>Administración semanal</td>
+                        <td>Administración semanal</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Receptores activados</strong></td>
+                        <td>GLP-1R (selectivo)</td>
+                        <td>GLP-1R + GIPR (co-agonismo)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Estudios de peso (fase III)</strong></td>
+                        <td>STEP: ~15% reducción en peso corporal</td>
+                        <td>SURMOUNT: ~20–22% reducción en peso corporal</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mecanismo diferencial propuesto</strong></td>
+                        <td>Saciedad central + vaciamiento gástrico</td>
+                        <td>Saciedad central + vaciamiento + señalización adiposa GIPR</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                Es importante señalar que las comparaciones de eficacia entre estudios deben interpretarse con cautela: los ensayos STEP (semaglutide) y SURMOUNT (tirzepatida) no son comparaciones directas y difieren en diseño, población y criterios de inclusión.
+            </p>
+
+            <h2>¿Para qué se investiga la tirzepatida?</h2>
+            <p>La investigación con tirzepatida se ha enfocado en varios dominios metabólicos:</p>
+
+            <h3>Regulación glucémica</h3>
+            <p>
+                Los estudios SURPASS (fases 1–5) exploraron la tirzepatida en contextos de diabetes tipo 2, reportando reducciones en HbA1c en rangos de 1.8–2.4% en comparación con placebo y comparadores activos (insulina degludec, semaglutide, dulaglutide). El mecanismo propuesto involucra la secreción insulínica dependiente de glucosa vía GLP-1R y la modulación del glucagón.
+            </p>
+
+            <h3>Composición corporal y balance energético</h3>
+            <p>
+                El programa SURMOUNT (fases 2–4) investigó tirzepatida en sujetos con obesidad sin diabetes. Los estudios exploran reducciones en masa grasa total y visceral mediante análisis de composición corporal (DEXA). Los mecanismos estudiados incluyen la señalización hipotalámica de saciedad (vía GLP-1R en núcleo arcuato) y efectos directos del GIPR en tejido adiposo blanco.
+            </p>
+
+            <h3>Perfil cardiovascular</h3>
+            <p>
+                El ensayo SURPASS-CVOT investiga el impacto de la tirzepatida en eventos cardiovasculares mayores (MACE) en pacientes con diabetes tipo 2 y enfermedad cardiovascular establecida. Los datos intermedios y el mecanismo GLP-1R muestran similitudes con otros agonistas GLP-1 que han demostrado reducción de MACE, aunque los datos específicos de tirzepatida están en proceso de consolidación.
+            </p>
+
+            <h3>Esteatosis hepática</h3>
+            <p>
+                Investigaciones preliminares exploran la tirzepatida en el contexto de la enfermedad del hígado graso no alcohólico (MASLD/NAFLD), observando reducciones en marcadores de esteatosis y fibrosis en subgrupos de los estudios SURPASS. El mecanismo postulado incluye la reducción de la lipogénesis de novo y mejora en la señalización hepática de insulina.
+            </p>
+
+            <div class="article-divider"></div>
+
+            <h2>Preguntas frecuentes de investigación</h2>
+
+            <div class="faq-list">
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        ¿A qué dosis se usa la tirzepatida en estudios clínicos?
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-a">
+                        <p>Los ensayos clínicos de fase III han utilizado dosis de 5 mg, 10 mg y 15 mg administradas semanalmente por vía subcutánea, con un esquema de titulación gradual que generalmente inicia en 2.5 mg/semana durante 4 semanas antes de escalar. Esta titulación se diseña para caracterizar la tolerabilidad gastrointestinal, que es el efecto adverso más reportado (náuseas, vómito, diarrea) en las primeras semanas. Las dosis de investigación en estudios de composición corporal (SURMOUNT-1) alcanzaron hasta 15 mg/semana.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        ¿Con qué frecuencia se administra en los protocolos de investigación?
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-a">
+                        <p>La vida media de ~5 días hace que la administración semanal sea la frecuencia estándar en todos los estudios publicados. Esto permite alcanzar concentraciones plasmáticas estables (steady-state) en aproximadamente 4–5 semanas de dosificación semanal. Los estudios no han explorado frecuencias diarias ni bisemanales de forma sistemática; la modificación química C18 diacídica fue específicamente diseñada para permitir la administración semanal.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        ¿Se puede combinar con otros péptidos en investigación?
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-a">
+                        <p>Los estudios clínicos de tirzepatida no han investigado sistemáticamente su combinación con otros péptidos experimentales. En los ensayos SURPASS sí se combinó con insulina basal (degludec, glargina) y con metformina. Las interacciones farmacológicas con otras moléculas peptídicas no están caracterizadas en la literatura disponible. Cualquier exploración combinatoria pertenece al ámbito de investigación preclínica y requiere diseño experimental controlado.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        ¿Cuál es el mecanismo propuesto para la reducción de peso superior a semaglutide?
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-a">
+                        <p>Los investigadores proponen que la diferencia reside en el co-agonismo GIPR. Estudios en modelos animales y análisis de señalización in vitro sugieren que el GIPR en el sistema nervioso central contribuye a la reducción del apetito de forma independiente al GLP-1R. Adicionalmente, se investiga si el GIPR en tejido adiposo blanco modula la lipólisis y el almacenamiento de grasa visceral. Sin embargo, el mecanismo exacto de la diferencia de magnitud frente a semaglutide no está completamente elucidado y es un área de investigación activa.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        ¿Qué diferencia a tirzepatida de retatrutide, el triple agonista?
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-a">
+                        <p>Retatrutide (también conocido como LY3437943) adiciona el agonismo del receptor de glucagón (GcgR) a los ya presentes GLP-1R y GIPR. La activación del GcgR incrementa el gasto energético basal mediante termogénesis hepática y aumenta la movilización de ácidos grasos. Los datos preliminares de fase 2 para retatrutide reportan reducciones de peso aún mayores (~24% en 48 semanas), aunque con un perfil de efectos adversos diferente dado el agonismo glucagonérgico (mayor tendencia a hiperglucemia transitoria al inicio). Tirzepatida, al no activar el GcgR, no tiene este componente de termogénesis mediada por glucagón.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="article-divider"></div>
+
+            <h2>Recursos y literatura científica</h2>
+            <p>Los siguientes estudios son referencia clave para la investigación con tirzepatida:</p>
+
+            <ol class="references">
+                <li>Frias JP, et al. <em>Tirzepatide versus Semaglutide Once Weekly in Patients with Type 2 Diabetes.</em> N Engl J Med. 2021;385(6):503-515. (SURPASS-2)</li>
+                <li>Jastreboff AM, et al. <em>Tirzepatide Once Weekly for the Treatment of Obesity.</em> N Engl J Med. 2022;387(3):205-216. (SURMOUNT-1)</li>
+                <li>Thomas MK, et al. <em>Dual GIP and GLP-1 Receptor Agonist Tirzepatide Improves Beta-cell Function and Insulin Sensitivity in Type 2 Diabetes.</em> J Clin Endocrinol Metab. 2021;106(2):388-396.</li>
+                <li>Samms RJ, et al. <em>Functionally distinct GIPR expression distinguishes adipose from gut tissues for GIPR agonism.</em> JCI Insight. 2021;6(2):e141606.</li>
+                <li>Coskun T, et al. <em>LY3298176, a novel dual GIP and GLP-1 receptor agonist for the treatment of type 2 diabetes mellitus.</em> Mol Metab. 2018;18:3-14.</li>
+            </ol>
+
+        </div>
+
+        <!-- RESEARCH CTA -->
+        <div class="research-cta">
+            <div class="research-cta-text">
+                <h4>¿Consultas sobre tirzepatida para investigación?</h4>
+                <p>Nuestro equipo atiende consultas científicas sobre disponibilidad de compuestos de grado investigación. Sin fines clínicos ni terapéuticos.</p>
+            </div>
+            <a href="https://wa.me/525527962437" target="_blank" rel="noopener noreferrer" class="wa-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Consultas Científicas
+            </a>
+        </div>
+
+        <!-- RELATED ARTICLES -->
+        <div class="related">
+            <h3>Artículos relacionados</h3>
+            <div class="related-grid">
+                <a href="articulo-semaglutide-vs-tirzepatida.html" class="related-card">
+                    <span class="related-card-tag article-tag tag-metabolico">Metabólico</span>
+                    <h4>¿En qué se diferencia Semaglutide de Tirzepatida?</h4>
+                </a>
+                <a href="articulo-retatrutide.html" class="related-card">
+                    <span class="related-card-tag article-tag tag-metabolico">Metabólico</span>
+                    <h4>Retatrutide: el triple agonista que va más allá del GLP-1</h4>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div style="display:flex; flex-direction:column; gap:0.75rem;">
+            <a class="footer-brand" href="index.html">
+                <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 2C16 2 7 11 7 19C7 23.9706 11.0294 28 16 28C20.9706 28 25 23.9706 25 19C25 11 16 2 16 2Z" fill="#0D8A6E"/>
+                    <path d="M16 9L11.5 16H20.5L16 9Z" fill="white" opacity="0.55"/>
+                </svg>
+                <span class="footer-brand-text">BIOFILLERS</span>
+            </a>
+            <div class="footer-links">
+                <a class="footer-link" href="disclaimer.html">Aviso Legal</a>
+                <a class="footer-link" href="index.html#tendencias">Artículos</a>
+                <a class="footer-link" href="index.html#compuestos">Compuestos</a>
+            </div>
+        </div>
+        <p style="font-size:0.69rem; color:var(--text-muted); max-width:480px; text-align:right; line-height:1.65;">
+            Solo para fines de investigación y educación. No se hacen afirmaciones terapéuticas. © 2026 Biofillers Research.
+        </p>
+    </footer>
+
+    <script>
+        function toggleFaq(btn) {
+            const item = btn.closest('.faq-item');
+            item.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

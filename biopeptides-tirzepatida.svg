@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  BIOPEPTIDES — TIRZEPATIDE 60MG
+  Box dieline: 58 × 20 × 58 mm
+  ──────────────────────────────
+  PINK dashed lines  = FOLD
+  BLUE solid lines   = CUT
+  ──────────────────────────────
+  Replace the [QR PLACEHOLDER] rectangles with your actual WhatsApp QR image.
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 164 108"
+     width="164mm" height="108mm">
+
+  <defs>
+    <style>
+      text { font-family: 'Century Gothic', 'Trebuchet MS', Arial, sans-serif; }
+      .info { font-family: Arial, Helvetica, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════════
+       BACKGROUND FILLS
+  ═══════════════════════════════════════════════ -->
+
+  <!-- Glue tab -->
+  <rect x="0"   y="25" width="8"  height="58" fill="#DE6E27"/>
+
+  <!-- Left side panel -->
+  <rect x="8"   y="25" width="20" height="58" fill="#DE6E27"/>
+
+  <!-- Right side panel -->
+  <rect x="86"  y="25" width="20" height="58" fill="#DE6E27"/>
+
+  <!-- FRONT panel -->
+  <rect x="28"  y="25" width="58" height="58" fill="#DE6E27"/>
+
+  <!-- BACK panel -->
+  <rect x="106" y="25" width="58" height="58" fill="#DE6E27"/>
+
+  <!-- Top flaps (above FRONT and BACK) -->
+  <rect x="28"  y="0"  width="58" height="25" fill="#DE6E27"/>
+  <rect x="106" y="0"  width="58" height="25" fill="#DE6E27"/>
+
+  <!-- Top dust flaps (above sides) -->
+  <rect x="8"   y="5"  width="20" height="20" fill="#DE6E27"/>
+  <rect x="86"  y="5"  width="20" height="20" fill="#DE6E27"/>
+
+  <!-- Bottom flaps -->
+  <rect x="28"  y="83" width="58" height="25" fill="#DE6E27"/>
+  <rect x="106" y="83" width="58" height="25" fill="#DE6E27"/>
+
+  <!-- Bottom dust flaps -->
+  <rect x="8"   y="83" width="20" height="20" fill="#DE6E27"/>
+  <rect x="86"  y="83" width="20" height="20" fill="#DE6E27"/>
+
+  <!-- ═══════════════════════════════════════════════
+       FRONT PANEL  (x=28, y=25, 58×58 mm)
+  ═══════════════════════════════════════════════ -->
+
+  <!-- Dark header strip (15 mm tall) -->
+  <rect x="28" y="25" width="58" height="15" fill="#112318"/>
+
+  <!-- ── Logo Icon (water drop + leaf, white) ── -->
+  <!-- Positioned at x=39, y=32.5 (center of icon) -->
+  <g transform="translate(39, 32.5)">
+    <!-- Outer raindrop: round top, pointed bottom -->
+    <path d="M 0,5.5 C -4,3.5 -4,-1 -2,-3.5 C -1,-5 1,-5 2,-3.5 C 4,-1 4,3.5 0,5.5 Z"
+          fill="none" stroke="white" stroke-width="0.75" stroke-linejoin="round"/>
+    <!-- Left leaf curve -->
+    <path d="M 0,-2.5 C -2.2,-0.5 -2.2,2 0,3.5"
+          stroke="white" stroke-width="0.6" fill="none" stroke-linecap="round"/>
+    <!-- Right leaf curve -->
+    <path d="M 0,-2.5 C 2.2,-0.5 2.2,2 0,3.5"
+          stroke="white" stroke-width="0.6" fill="none" stroke-linecap="round"/>
+    <!-- Center stem -->
+    <line x1="0" y1="-2.5" x2="0" y2="3.5"
+          stroke="white" stroke-width="0.45" stroke-linecap="round"/>
+  </g>
+
+  <!-- Brand name in header -->
+  <text x="47.5" y="30.2" font-size="5" font-weight="bold" letter-spacing="0.5">
+    <tspan fill="#8BE3DA">BIO</tspan><tspan fill="white">PEPTIDES</tspan>
+  </text>
+  <text x="47.5" y="35.5" font-size="2.3" fill="white" letter-spacing="0.45" opacity="0.6"
+        class="info">ADVANCED PEPTIDE RESEARCH</text>
+
+  <!-- ── Main content ── -->
+
+  <!-- TIRZEPATIDE -->
+  <text x="57" y="53.5" font-size="7" font-weight="bold" fill="white"
+        text-anchor="middle" letter-spacing="0.6">TIRZEPATIDE</text>
+
+  <!-- Separator -->
+  <line x1="32" y1="56.5" x2="82" y2="56.5"
+        stroke="white" stroke-width="0.2" opacity="0.35"/>
+
+  <!-- 60MG badge -->
+  <rect x="44" y="58" width="18" height="8.5" rx="2"
+        fill="white" fill-opacity="0.18" stroke="white" stroke-width="0.5"/>
+  <text x="53" y="64.5" font-size="6" font-weight="bold" fill="white"
+        text-anchor="middle" class="info">60MG</text>
+
+  <!-- Info lines -->
+  <text x="57" y="71" font-size="3.2" fill="white" text-anchor="middle"
+        opacity="0.92" class="info">Lyophilized Peptide</text>
+  <text x="57" y="75" font-size="3.2" fill="white" text-anchor="middle"
+        opacity="0.92" class="info">99% Purity, HPLC</text>
+
+  <!-- 2 Vials (bottom left) -->
+  <text x="32" y="80" font-size="3" fill="white" opacity="0.85" class="info">2 Vials</text>
+
+  <!-- QR Placeholder (bottom right, 12×12 mm) -->
+  <rect x="71" y="69.5" width="13" height="13" rx="0.8" fill="white"/>
+  <!-- Corner squares to mimic QR pattern -->
+  <rect x="72"   y="70.5" width="3.5" height="3.5" rx="0.3" fill="#DE6E27"/>
+  <rect x="80"   y="70.5" width="3.5" height="3.5" rx="0.3" fill="#DE6E27"/>
+  <rect x="72"   y="79"   width="3.5" height="3.5" rx="0.3" fill="#DE6E27"/>
+  <rect x="77"   y="74.5" width="2"   height="2"   fill="#DE6E27"/>
+  <rect x="74.5" y="77"   width="1.5" height="1.5" fill="#DE6E27"/>
+  <rect x="79"   y="77.5" width="2"   height="2"   fill="#DE6E27"/>
+  <text x="77.5" y="81.5" font-size="1.6" fill="#DE6E27" text-anchor="middle"
+        class="info">INSERT QR</text>
+
+  <!-- ═══════════════════════════════════════════════
+       BACK PANEL  (x=106, y=25, 58×58 mm)
+  ═══════════════════════════════════════════════ -->
+
+  <!-- Dark header strip (12 mm) -->
+  <rect x="106" y="25" width="58" height="12" fill="#112318"/>
+
+  <!-- Brand name in back header -->
+  <text x="135" y="33" font-size="4.2" font-weight="bold" text-anchor="middle" letter-spacing="0.5">
+    <tspan fill="#8BE3DA">BIO</tspan><tspan fill="white">PEPTIDES</tspan>
+  </text>
+
+  <!-- Product name on back -->
+  <text x="135" y="47" font-size="6.2" font-weight="bold" fill="white"
+        text-anchor="middle" letter-spacing="0.5">TIRZEPATIDE</text>
+
+  <!-- Dosage on back -->
+  <text x="135" y="54" font-size="4.8" fill="white" text-anchor="middle" class="info">60MG</text>
+
+  <!-- Separator on back -->
+  <line x1="109" y1="57" x2="161" y2="57"
+        stroke="white" stroke-width="0.2" opacity="0.35"/>
+
+  <!-- Info on back -->
+  <text x="135" y="62.5" font-size="3" fill="white" text-anchor="middle"
+        opacity="0.9" class="info">Lyophilized Peptide</text>
+  <text x="135" y="67"   font-size="3" fill="white" text-anchor="middle"
+        opacity="0.9" class="info">99% Purity, HPLC  |  2 Vials</text>
+
+  <!-- Disclaimer on back -->
+  <text x="135" y="72" font-size="2.2" fill="white" text-anchor="middle"
+        opacity="0.65" class="info">For Research Use Only</text>
+
+  <!-- QR Placeholder (centered on back, 13×13 mm) -->
+  <rect x="128.5" y="73.5" width="13" height="13" rx="0.8" fill="white"/>
+  <rect x="129.5" y="74.5" width="3.5" height="3.5" rx="0.3" fill="#DE6E27"/>
+  <rect x="137.5" y="74.5" width="3.5" height="3.5" rx="0.3" fill="#DE6E27"/>
+  <rect x="129.5" y="83"   width="3.5" height="3.5" rx="0.3" fill="#DE6E27"/>
+  <rect x="134.5" y="78"   width="2"   height="2"   fill="#DE6E27"/>
+  <rect x="132"   y="80.5" width="1.5" height="1.5" fill="#DE6E27"/>
+  <text x="135" y="85.5" font-size="1.6" fill="#DE6E27" text-anchor="middle"
+        class="info">INSERT QR</text>
+
+  <!-- ═══════════════════════════════════════════════
+       SIDE PANELS — minimal rotated text
+  ═══════════════════════════════════════════════ -->
+
+  <!-- Left side (center x=18, y=54) -->
+  <text font-size="3.2" font-weight="bold" fill="white" letter-spacing="0.5" opacity="0.8"
+        transform="translate(18, 54) rotate(-90)" text-anchor="middle">
+    BIOPEPTIDES · TIRZEPATIDE 60MG
+  </text>
+
+  <!-- Right side (center x=96, y=54) -->
+  <text font-size="3.2" font-weight="bold" fill="white" letter-spacing="0.5" opacity="0.8"
+        transform="translate(96, 54) rotate(-90)" text-anchor="middle">
+    BIOPEPTIDES · TIRZEPATIDE 60MG
+  </text>
+
+  <!-- ═══════════════════════════════════════════════
+       DIELINE — FOLD LINES (pink / magenta dashed)
+  ═══════════════════════════════════════════════ -->
+  <g stroke="#FF00AA" stroke-width="0.2" stroke-dasharray="2,1.5" fill="none">
+    <!-- Vertical folds -->
+    <line x1="8"   y1="5"   x2="8"   y2="103"/>
+    <line x1="28"  y1="0"   x2="28"  y2="108"/>
+    <line x1="86"  y1="0"   x2="86"  y2="108"/>
+    <line x1="106" y1="0"   x2="106" y2="108"/>
+    <line x1="164" y1="0"   x2="164" y2="108"/>
+    <!-- Horizontal folds (top and bottom of main body) -->
+    <line x1="0"   y1="25"  x2="164" y2="25"/>
+    <line x1="0"   y1="83"  x2="164" y2="83"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════
+       DIELINE — CUT LINES (blue solid)
+  ═══════════════════════════════════════════════ -->
+  <g stroke="#0055CC" stroke-width="0.3" fill="none">
+    <!-- Top edge of top flaps -->
+    <line x1="28"  y1="0"   x2="86"  y2="0"/>
+    <line x1="106" y1="0"   x2="164" y2="0"/>
+    <!-- Top of dust flaps -->
+    <line x1="8"   y1="5"   x2="28"  y2="5"/>
+    <line x1="86"  y1="5"   x2="106" y2="5"/>
+    <!-- Outer sides of top dust flaps -->
+    <line x1="8"   y1="5"   x2="8"   y2="25"/>
+    <line x1="86"  y1="5"   x2="86"  y2="25"/>
+    <!-- Left edge (glue tab) -->
+    <line x1="0"   y1="25"  x2="0"   y2="83"/>
+    <!-- Glue tab top/bottom connectors -->
+    <line x1="0"   y1="25"  x2="8"   y2="25"/>
+    <line x1="0"   y1="83"  x2="8"   y2="83"/>
+    <!-- Right edge -->
+    <line x1="164" y1="0"   x2="164" y2="108"/>
+    <!-- Bottom edge of bottom flaps -->
+    <line x1="28"  y1="108" x2="86"  y2="108"/>
+    <line x1="106" y1="108" x2="164" y2="108"/>
+    <!-- Bottom of dust flaps -->
+    <line x1="8"   y1="103" x2="28"  y2="103"/>
+    <line x1="86"  y1="103" x2="106" y2="103"/>
+    <!-- Outer sides of bottom dust flaps -->
+    <line x1="8"   y1="83"  x2="8"   y2="103"/>
+    <line x1="86"  y1="83"  x2="86"  y2="103"/>
+  </g>
+
+</svg>
